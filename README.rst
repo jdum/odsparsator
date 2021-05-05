@@ -12,7 +12,8 @@ file using the odfdo library.
 When used as a library, odsparsator parses an .ods file and returns a python
 structure.
 
-The resulting data follow the format of the reverse odsgenerator.py script.
+The resulting data follows the format of the reverse odsgenerator.py script,
+see https://github.com/jdum/odsgenerator
 
 
 installation
@@ -38,8 +39,7 @@ arguments
 
 ``output_file``: output file, json file generated from input.
 
-Use ``odsparsator --help`` for more details about options
-and look at examples in the tests folder.
+Use ``odsparsator --help`` for more details about options.
 
 
 from python code
@@ -54,9 +54,9 @@ from python code
 documentation
 -------------
 
-Doc is coming.
+See in the doc folder:
 
-And see also ``odsgenerator``.
+``html/odsparsator.html``
 
 
 license
