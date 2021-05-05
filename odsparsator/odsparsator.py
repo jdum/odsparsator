@@ -21,7 +21,7 @@ import json
 import odfdo
 from odfdo import Document, Element
 
-__version__ = "1.2.0"
+__version__ = "1.3.0"
 
 
 BODY = "body"

@@ -1,0 +1,76 @@
+{
+    "body": [
+        {
+            "name": "test",
+            "table": [
+                {
+                    "row": [
+                        {
+                            "value": "formula test",
+                            "style": "left"
+                        }
+                    ],
+                    "style": "default_table_row"
+                },
+                {
+                    "row": [
+                        {
+                            "value": "a",
+                            "style": "left"
+                        },
+                        {
+                            "value": 10,
+                            "style": "right"
+                        }
+                    ],
+                    "style": "default_table_row"
+                },
+                {
+                    "row": [
+                        {
+                            "value": "b",
+                            "style": "left"
+                        },
+                        {
+                            "value": 20,
+                            "style": "right"
+                        }
+                    ],
+                    "style": "default_table_row"
+                },
+                {
+                    "row": [
+                        {
+                            "value": "a+b",
+                            "style": "left"
+                        },
+                        {
+                            "value": 30,
+                            "style": "right",
+                            "formula": "of:=[.B3]+[.B2]"
+                        }
+                    ],
+                    "style": "default_table_row"
+                }
+            ],
+            "width": [
+                "22.58mm",
+                "22.58mm"
+            ]
+        }
+    ],
+    "styles": [
+        {
+            "name": "right",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n            <style:table-cell-properties style:text-align-source=\"fix\"/>\n            <style:paragraph-properties fo:text-align=\"end\" fo:margin-right=\"1mm\"/>\n            </style:style>\n"
+        },
+        {
+            "name": "default_table_row",
+            "definition": "<style:style style:family=\"table-row\">\n            <style:table-row-properties style:row-height=\"4.52mm\" fo:break-before=\"auto\" style:use-optimal-row-height=\"true\"/>\n            </style:style>\n"
+        },
+        {
+            "name": "left",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n            <style:table-cell-properties style:text-align-source=\"fix\"/>\n            <style:paragraph-properties fo:text-align=\"start\" fo:margin-left=\"1mm\"/>\n            </style:style>\n"
+        }
+    ]
+}

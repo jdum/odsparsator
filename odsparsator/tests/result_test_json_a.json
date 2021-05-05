@@ -1,0 +1,510 @@
+{
+    "body": [
+        {
+            "name": "first tab",
+            "table": [
+                {
+                    "row": [
+                        {
+                            "value": "spanned cell",
+                            "style": "bold",
+                            "colspanned": 3,
+                            "rowspanned": 2
+                        },
+                        {
+                            "value": null,
+                            "style": "left"
+                        },
+                        {
+                            "value": null,
+                            "style": "left"
+                        },
+                        {
+                            "value": "d",
+                            "style": "left"
+                        },
+                        {
+                            "value": "e",
+                            "style": "left"
+                        },
+                        {
+                            "value": "f",
+                            "style": "left"
+                        },
+                        {
+                            "value": "g",
+                            "style": "left"
+                        },
+                        {
+                            "value": "h",
+                            "style": "left",
+                            "colspanned": 2,
+                            "rowspanned": 2
+                        },
+                        {
+                            "value": null,
+                            "style": "left"
+                        },
+                        {
+                            "value": "j",
+                            "style": "left"
+                        }
+                    ],
+                    "style": "table_row_1cm"
+                },
+                {
+                    "row": [
+                        {
+                            "value": null,
+                            "style": "left"
+                        },
+                        {
+                            "value": null,
+                            "style": "left"
+                        },
+                        {
+                            "value": null,
+                            "style": "left"
+                        },
+                        {
+                            "value": 30,
+                            "style": "right"
+                        },
+                        {
+                            "value": 40,
+                            "style": "right"
+                        },
+                        {
+                            "value": 50,
+                            "style": "right"
+                        },
+                        {
+                            "value": 60,
+                            "style": "right"
+                        },
+                        {
+                            "value": null,
+                            "style": "left"
+                        },
+                        {
+                            "value": null,
+                            "style": "left"
+                        },
+                        {
+                            "value": 90,
+                            "style": "right"
+                        }
+                    ],
+                    "style": "table_row_1cm"
+                },
+                {
+                    "row": [
+                        {
+                            "value": 1,
+                            "style": "right"
+                        },
+                        {
+                            "value": 11,
+                            "style": "right"
+                        },
+                        {
+                            "value": 21,
+                            "style": "right"
+                        },
+                        {
+                            "value": 31,
+                            "style": "right"
+                        },
+                        {
+                            "value": 41,
+                            "style": "right"
+                        },
+                        {
+                            "value": 51,
+                            "style": "right",
+                            "colspanned": 1,
+                            "rowspanned": 2
+                        },
+                        {
+                            "value": 61,
+                            "style": "right"
+                        },
+                        {
+                            "value": 71,
+                            "style": "right",
+                            "colspanned": 3,
+                            "rowspanned": 1
+                        }
+                    ],
+                    "style": "table_row_1cm"
+                },
+                {
+                    "row": [
+                        {
+                            "value": 2,
+                            "style": "right"
+                        },
+                        {
+                            "value": 12,
+                            "style": "right"
+                        },
+                        {
+                            "value": 22,
+                            "style": "right"
+                        },
+                        {
+                            "value": 32,
+                            "style": "right"
+                        },
+                        {
+                            "value": 42,
+                            "style": "right"
+                        },
+                        {
+                            "value": 52,
+                            "style": "right"
+                        },
+                        {
+                            "value": 62,
+                            "style": "right"
+                        },
+                        {
+                            "value": 72,
+                            "style": "right"
+                        },
+                        {
+                            "value": 82,
+                            "style": "right"
+                        },
+                        {
+                            "value": 92,
+                            "style": "right"
+                        }
+                    ],
+                    "style": "table_row_1cm"
+                }
+            ],
+            "width": [
+                "1cm",
+                "2cm",
+                "3cm",
+                "4cm",
+                "2cm"
+            ]
+        },
+        {
+            "name": "second tab",
+            "table": [
+                {
+                    "row": [
+                        {
+                            "value": "a",
+                            "style": "bold_left_bg_gray_grid_06pt"
+                        },
+                        {
+                            "value": "b",
+                            "style": "bold_left_bg_gray_grid_06pt"
+                        },
+                        {
+                            "value": "c",
+                            "style": "bold_left_bg_gray_grid_06pt"
+                        },
+                        {
+                            "value": "d",
+                            "style": "bold_left_bg_gray_grid_06pt"
+                        },
+                        {
+                            "value": "e",
+                            "style": "bold_left_bg_gray_grid_06pt"
+                        },
+                        {
+                            "value": "f",
+                            "style": "bold_left_bg_gray_grid_06pt"
+                        },
+                        {
+                            "value": "g",
+                            "style": "bold_left_bg_gray_grid_06pt"
+                        },
+                        {
+                            "value": "h",
+                            "style": "bold_left_bg_gray_grid_06pt"
+                        },
+                        {
+                            "value": "i",
+                            "style": "bold_left_bg_gray_grid_06pt"
+                        },
+                        {
+                            "value": "j",
+                            "style": "bold_left_bg_gray_grid_06pt"
+                        }
+                    ],
+                    "style": "default_table_row"
+                },
+                {
+                    "row": [
+                        {
+                            "value": 100.01,
+                            "style": "decimal2_grid_06pt"
+                        },
+                        {
+                            "value": 110.02,
+                            "style": "decimal2_grid_06pt"
+                        },
+                        {
+                            "value": "hop",
+                            "style": "decimal2_grid_06pt"
+                        },
+                        {
+                            "value": 130,
+                            "style": "decimal2_grid_06pt"
+                        },
+                        {
+                            "value": 140,
+                            "style": "decimal2_grid_06pt"
+                        },
+                        {
+                            "value": 150,
+                            "style": "decimal2_grid_06pt"
+                        },
+                        {
+                            "value": 160,
+                            "style": "decimal2_grid_06pt"
+                        },
+                        {
+                            "value": 170,
+                            "style": "decimal2_grid_06pt"
+                        },
+                        {
+                            "value": 180,
+                            "style": "decimal2_grid_06pt"
+                        },
+                        {
+                            "value": 190,
+                            "style": "decimal2_grid_06pt"
+                        }
+                    ],
+                    "style": "default_table_row"
+                },
+                {
+                    "row": [
+                        {
+                            "value": 101,
+                            "style": "decimal3_grid_06pt"
+                        },
+                        {
+                            "value": 111,
+                            "style": "decimal3_grid_06pt"
+                        },
+                        {
+                            "value": 121,
+                            "style": "bg_yellow_grid06"
+                        },
+                        {
+                            "value": 131,
+                            "style": "decimal3_grid_06pt"
+                        },
+                        {
+                            "value": 141,
+                            "style": "blue_named_grid"
+                        },
+                        {
+                            "value": 151,
+                            "style": "decimal3_grid_06pt"
+                        },
+                        {
+                            "value": 161,
+                            "style": "decimal3_grid_06pt"
+                        },
+                        {
+                            "value": 171,
+                            "style": "decimal3_grid_06pt"
+                        },
+                        {
+                            "value": 181,
+                            "style": "decimal3_grid_06pt"
+                        },
+                        {
+                            "value": 191,
+                            "style": "decimal3_grid_06pt"
+                        }
+                    ],
+                    "style": "default_table_row"
+                },
+                {
+                    "row": [
+                        {
+                            "value": 102.314,
+                            "style": "center_integer_no_zero_grid_06pt"
+                        },
+                        {
+                            "value": 112,
+                            "style": "center_integer_no_zero_grid_06pt"
+                        },
+                        {
+                            "value": 122,
+                            "style": "center_integer_no_zero_grid_06pt"
+                        },
+                        {
+                            "value": 132,
+                            "style": "center_integer_no_zero_grid_06pt"
+                        },
+                        {
+                            "value": 0,
+                            "style": "center_integer_no_zero_grid_06pt"
+                        },
+                        {
+                            "value": 152,
+                            "style": "center_integer_no_zero_grid_06pt"
+                        },
+                        {
+                            "value": 0,
+                            "style": "center_integer_no_zero_grid_06pt"
+                        },
+                        {
+                            "value": 172,
+                            "style": "center_integer_no_zero_grid_06pt"
+                        },
+                        {
+                            "value": 0,
+                            "style": "center_integer_no_zero_grid_06pt"
+                        },
+                        {
+                            "value": 192,
+                            "style": "center_integer_no_zero_grid_06pt"
+                        }
+                    ],
+                    "style": "default_table_row"
+                }
+            ],
+            "width": [
+                "2.5cm"
+            ]
+        }
+    ],
+    "styles": [
+        {
+            "name": "DejaVu Sans",
+            "definition": "<style:font-face svg:font-family=\"'DejaVu Sans'\" style:font-pitch=\"variable\"/>\n"
+        },
+        {
+            "name": "Arial",
+            "definition": "<style:font-face svg:font-family=\"Arial\" style:font-family-generic=\"swiss\" style:font-pitch=\"variable\"/>\n"
+        },
+        {
+            "name": "Liberation Sans",
+            "definition": "<style:font-face svg:font-family=\"'Liberation Sans'\" style:font-family-generic=\"swiss\" style:font-pitch=\"variable\"/>\n"
+        },
+        {
+            "name": "Tahoma",
+            "definition": "<style:font-face svg:font-family=\"Tahoma\" style:font-family-generic=\"system\" style:font-pitch=\"variable\"/>\n"
+        },
+        {
+            "name": "co1",
+            "definition": "<style:style style:family=\"table-column\">\n  <style:table-column-properties fo:break-before=\"auto\" style:column-width=\"22.58mm\"/>\n</style:style>\n"
+        },
+        {
+            "name": "ro1",
+            "definition": "<style:style style:family=\"table-row\">\n  <style:table-row-properties style:row-height=\"4.52mm\" fo:break-before=\"auto\" style:use-optimal-row-height=\"true\"/>\n</style:style>\n"
+        },
+        {
+            "name": "ta1",
+            "definition": "<style:style style:family=\"table\" style:master-page-name=\"Default\">\n  <style:table-properties table:display=\"true\" style:writing-mode=\"lr-tb\"/>\n</style:style>\n"
+        },
+        {
+            "name": "bg_yellow",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n<style:table-cell-properties fo:background-color=\"#fff9ae\"/>\n<style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n</style:style>\n"
+        },
+        {
+            "name": "bg_yellow_grid06",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n<style:table-cell-properties fo:background-color=\"#fff9ae\" fo:border=\"0.06pt solid #000000\"/>\n<style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n</style:style>\n"
+        },
+        {
+            "name": "blue_named",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n<style:table-cell-properties fo:background-color=\"#aaaaff\"/>\n<style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n</style:style>\n"
+        },
+        {
+            "name": "blue_named_grid",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n<style:table-cell-properties fo:background-color=\"#aaaaff\" fo:border=\"0.06pt solid #000000\"/>\n<style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n</style:style>\n"
+        },
+        {
+            "name": "table_row_1cm",
+            "definition": "<style:style style:family=\"table-row\">\n            <style:table-row-properties style:row-height=\"1cm\" fo:break-before=\"auto\"/>\n            </style:style>\n"
+        },
+        {
+            "name": "bold",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n            <style:text-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\"/>\n            <style:table-cell-properties style:text-align-source=\"value-type\"/>\n            <style:paragraph-properties fo:margin-right=\"1mm\"/>\n            </style:style>\n"
+        },
+        {
+            "name": "left",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n            <style:table-cell-properties style:text-align-source=\"fix\"/>\n            <style:paragraph-properties fo:text-align=\"start\" fo:margin-left=\"1mm\"/>\n            </style:style>\n"
+        },
+        {
+            "name": "right",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n            <style:table-cell-properties style:text-align-source=\"fix\"/>\n            <style:paragraph-properties fo:text-align=\"end\" fo:margin-right=\"1mm\"/>\n            </style:style>\n"
+        },
+        {
+            "name": "lpod_auto_1",
+            "definition": "<style:style style:family=\"table-column\">\n                    <style:table-column-properties fo:break-before=\"auto\" style:column-width=\"1cm\"/>\n                    </style:style>\n"
+        },
+        {
+            "name": "lpod_auto_2",
+            "definition": "<style:style style:family=\"table-column\">\n                    <style:table-column-properties fo:break-before=\"auto\" style:column-width=\"2cm\"/>\n                    </style:style>\n"
+        },
+        {
+            "name": "lpod_auto_3",
+            "definition": "<style:style style:family=\"table-column\">\n                    <style:table-column-properties fo:break-before=\"auto\" style:column-width=\"3cm\"/>\n                    </style:style>\n"
+        },
+        {
+            "name": "lpod_auto_4",
+            "definition": "<style:style style:family=\"table-column\">\n                    <style:table-column-properties fo:break-before=\"auto\" style:column-width=\"4cm\"/>\n                    </style:style>\n"
+        },
+        {
+            "name": "lpod_auto_5",
+            "definition": "<style:style style:family=\"table-column\">\n                    <style:table-column-properties fo:break-before=\"auto\" style:column-width=\"2cm\"/>\n                    </style:style>\n"
+        },
+        {
+            "name": "default_table_row",
+            "definition": "<style:style style:family=\"table-row\">\n            <style:table-row-properties style:row-height=\"4.52mm\" fo:break-before=\"auto\" style:use-optimal-row-height=\"true\"/>\n            </style:style>\n"
+        },
+        {
+            "name": "bold_left_bg_gray_grid_06pt",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n             <style:table-cell-properties fo:background-color=\"#dddddd\" fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/>\n             <style:paragraph-properties fo:text-align=\"start\" fo:margin-left=\"1.2mm\"/>\n             <style:text-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\"/>\n             </style:style>\n"
+        },
+        {
+            "name": "decimal2_grid_06pt",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"decimal2\">\n             <style:table-cell-properties fo:border=\"0.06pt solid #000000\"/>\n             <style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n             </style:style>\n"
+        },
+        {
+            "name": "decimal2",
+            "definition": "<number:number-style><number:number number:decimal-places=\"2\" loext:min-decimal-places=\"2\" number:min-integer-digits=\"1\" number:grouping=\"false\"/>\n            </number:number-style>\n"
+        },
+        {
+            "name": "decimal3_grid_06pt",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"decimal3\">\n             <style:table-cell-properties fo:border=\"0.06pt solid #000000\"/>\n             <style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n             </style:style>\n"
+        },
+        {
+            "name": "decimal3",
+            "definition": "<number:number-style><number:number number:decimal-places=\"3\" loext:min-decimal-places=\"3\" number:min-integer-digits=\"1\" number:grouping=\"false\"/>\n            </number:number-style>\n"
+        },
+        {
+            "name": "center_integer_no_zero_grid_06pt",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"integer_no_zero\">\n             <style:table-cell-properties fo:border=\"0.06pt solid #000000\"/>\n             <style:paragraph-properties fo:text-align=\"center\"/>\n             </style:style>\n"
+        },
+        {
+            "name": "integer_no_zero",
+            "definition": "<number:number-style><number:number number:decimal-places=\"0\" loext:min-decimal-places=\"0\" number:min-integer-digits=\"0\" number:grouping=\"false\"/>\n            </number:number-style>\n"
+        },
+        {
+            "name": "lpod_auto_6",
+            "definition": "<style:style style:family=\"table-column\">\n                    <style:table-column-properties fo:break-before=\"auto\" style:column-width=\"2.5cm\"/>\n                    </style:style>\n"
+        },
+        {
+            "name": "Mpm1",
+            "definition": "<style:page-layout>\n  <style:page-layout-properties style:writing-mode=\"lr-tb\"/>\n  <style:header-style>\n    <style:header-footer-properties fo:min-height=\"7.51mm\" fo:margin-left=\"0mm\" fo:margin-right=\"0mm\" fo:margin-bottom=\"2.5mm\"/>\n  </style:header-style>\n  <style:footer-style>\n    <style:header-footer-properties fo:min-height=\"7.51mm\" fo:margin-left=\"0mm\" fo:margin-right=\"0mm\" fo:margin-top=\"2.5mm\"/>\n  </style:footer-style>\n</style:page-layout>\n"
+        },
+        {
+            "name": "Mpm2",
+            "definition": "<style:page-layout>\n  <style:page-layout-properties style:writing-mode=\"lr-tb\"/>\n  <style:header-style>\n    <style:header-footer-properties fo:min-height=\"7.51mm\" fo:margin-left=\"0mm\" fo:margin-right=\"0mm\" fo:margin-bottom=\"2.5mm\" fo:border=\"2.49pt solid #000000\" fo:padding=\"0.18mm\" fo:background-color=\"#c0c0c0\">\n      <style:background-image/>\n    </style:header-footer-properties>\n  </style:header-style>\n  <style:footer-style>\n    <style:header-footer-properties fo:min-height=\"7.51mm\" fo:margin-left=\"0mm\" fo:margin-right=\"0mm\" fo:margin-top=\"2.5mm\" fo:border=\"2.49pt solid #000000\" fo:padding=\"0.18mm\" fo:background-color=\"#c0c0c0\">\n      <style:background-image/>\n    </style:header-footer-properties>\n  </style:footer-style>\n</style:page-layout>\n"
+        }
+    ]
+}

@@ -42,6 +42,59 @@ arguments
 Use ``odsparsator --help`` for more details about options.
 
 
+sample
+------
+
+.. code-block:: bash
+
+    $ odsparsator --minimal sample.ods sample_minimal.json
+
+
+The result:
+
+.. code-block:: python
+
+    {
+        "body": [
+            {
+                "name": "first tab",
+                "table": [
+                    ["a", "b", "c"],
+                    [10, 20, 30]
+                ]
+            }
+        ]
+    }
+
+
+Without the --minimal option:
+
+.. code-block:: bash
+
+    $ odsparsator sample.ods sample_with_styles.json
+
+
+The result:
+
+.. code-block:: python
+
+    {
+    "body": [
+        {
+            "name": "first tab",
+            "table": [
+                {
+                    "row": [
+                        {
+                            "value": "a",
+                            "style": "bold_center_bg_gray_grid_06pt"
+                        },
+                        {
+                            "value": "b",
+                            "style": "bold_center_bg_gray_grid_06pt"
+    ...
+
+
 from python code
 ----------------
 
