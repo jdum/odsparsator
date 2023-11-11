@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>odsparsator 1.8.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=039e1c02" />
+    <script src="_static/documentation_options.js?v=08fded8f"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="odsparsator-a-ods-parser">
+<h1>odsparsator, a .ods parser.<a class="headerlink" href="#odsparsator-a-ods-parser" title="Link to this heading">¶</a></h1>
+<p>Generate a JSON file from an OpenDocument Format <code class="docutils literal notranslate"><span class="pre">.ods</span></code> file.</p>
+<p>When used as a script, <code class="docutils literal notranslate"><span class="pre">odsparsator</span></code> parses a <code class="docutils literal notranslate"><span class="pre">.ods</span></code> file and generates a JSON
+file using the <code class="docutils literal notranslate"><span class="pre">odfdo</span></code> library.</p>
+<p>When used as a library, <code class="docutils literal notranslate"><span class="pre">odsparsator</span></code> parses a <code class="docutils literal notranslate"><span class="pre">.ods</span></code> file and returns a Python
+structure.</p>
+<p>The resulting data follows the format of the reverse <code class="docutils literal notranslate"><span class="pre">odsgenerator.py</span></code> script,
+see https://github.com/jdum/odsgenerator</p>
+<p><code class="docutils literal notranslate"><span class="pre">odsparsator</span></code> is a <code class="docutils literal notranslate"><span class="pre">Python3</span></code> package, using the <a class="reference external" href="https://github.com/jdum/odfdo">odfdo</a> library. Current version requires Python &gt;= 3.9, see prior versions for older environments.</p>
+<p>Project:
+https://github.com/jdum/odsparsator</p>
+<p>Author:
+jerome.dumonteil&#64;gmail.com</p>
+<p>License:
+MIT</p>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h2>
+<p>Installation from Pypi (recommended):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">odsparsator</span>
+</pre></div>
+</div>
+<p>Installation from sources (requiring setuptools):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">.</span>
+</pre></div>
+</div>
+</section>
+<section id="cli-usage">
+<h2>CLI usage<a class="headerlink" href="#cli-usage" title="Link to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">odsparsator</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">version</span><span class="p">]</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span> <span class="n">input_file</span> <span class="n">output_file</span>
+</pre></div>
+</div>
+<section id="arguments">
+<h3>arguments<a class="headerlink" href="#arguments" title="Link to this heading">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">input_file</span></code>: input file, a .ods file.</p>
+<p><code class="docutils literal notranslate"><span class="pre">output_file</span></code>: output file, JSON file generated from input.</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">odsparsator</span> <span class="pre">--help</span></code> for more details about options.</p>
+</section>
+<section id="sample">
+<h3>sample<a class="headerlink" href="#sample" title="Link to this heading">¶</a></h3>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>odsparsator<span class="w"> </span>--minimal<span class="w"> </span>sample.ods<span class="w"> </span>sample_minimal.json
+</pre></div>
+</div>
+<p>The result:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;body&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;first tab&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;table&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">],</span>
+                <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Without the –minimal option:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>odsparsator<span class="w"> </span>sample.ods<span class="w"> </span>sample_with_styles.json
+</pre></div>
+</div>
+<p>The result:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="p">{</span>
+<span class="s2">&quot;body&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;first tab&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;table&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;row&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;style&quot;</span><span class="p">:</span> <span class="s2">&quot;bold_center_bg_gray_grid_06pt&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;style&quot;</span><span class="p">:</span> <span class="s2">&quot;bold_center_bg_gray_grid_06pt&quot;</span>
+                        <span class="o">...</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="usage-from-python-code">
+<h2>Usage from python code<a class="headerlink" href="#usage-from-python-code" title="Link to this heading">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">odsparsator</span>
+
+<span class="n">content</span> <span class="o">=</span> <span class="n">odsparsator</span><span class="o">.</span><span class="n">ods_to_python</span><span class="p">(</span><span class="s2">&quot;sample1.ods&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="principle">
+<h2>Principle<a class="headerlink" href="#principle" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>A document is a list or dict containing tabs,</p></li>
+<li><p>a tab is a list or dict containing rows,</p></li>
+<li><p>a row is a list or dict containing cells.</p></li>
+</ul>
+<p>A <strong>cell</strong> can be:</p>
+<ul class="simple">
+<li><p>int, float or str,</p></li>
+<li><p>a dict, with the following keys (only the ‘value’ key is mandatory):</p>
+<ul>
+<li><p>value: int, float or str,</p></li>
+<li><p>style: str or list of str, a style name or a list of style names,</p></li>
+<li><p>text: str, a string representation of the value (for ODF readers
+who use it),</p></li>
+<li><p>formula: str, content of the ‘table:formula’ attribute, some “of:”
+OpenFormula string,</p></li>
+<li><p>colspanned: int, the number of spanned columns,</p></li>
+<li><p>rowspanned: int, the number of spanned rows.</p></li>
+</ul>
+</li>
+</ul>
+<p>A <strong>row</strong> can be:</p>
+<ul class="simple">
+<li><p>a list of cells,</p></li>
+<li><p>a dict, with the following keys (only the ‘row’ key is mandatory):</p>
+<ul>
+<li><p>row: a list of cells, see above,</p></li>
+<li><p>style: str or list of str, a style name or a list of style names.</p></li>
+</ul>
+</li>
+</ul>
+<p>A <strong>tab</strong> can be:</p>
+<ul class="simple">
+<li><p>a list of rows,</p></li>
+<li><p>a dict, with the following keys (only the ‘table’ key is mandatory):</p>
+<ul>
+<li><p>table: a list of rows,</p></li>
+<li><p>width: a list containing the width of each column of the table</p></li>
+<li><p>name: str, the name of the tab,</p></li>
+<li><p>style: str or list of str, a style name or a list of style names.</p></li>
+</ul>
+</li>
+</ul>
+<p>A tab may have some post transformation:</p>
+<ul class="simple">
+<li><p>a list of span areas, cell coordinates are defined in the tab after
+its creation using odfo method Table.set_span(), with either
+coordiante system: “A1:B3” or [0, 0, 2, 1].</p></li>
+</ul>
+<p>A <strong>document</strong> can be:</p>
+<ul class="simple">
+<li><p>a list of tabs,</p></li>
+<li><p>a dict, with the following keys (only the ‘body’ key is mandatory):</p>
+<ul>
+<li><p>body: a list of tabs,</p></li>
+<li><p>styles: a list of dict of styles definitions,</p></li>
+<li><p>defaults: a dict, for the defaults styles.</p></li>
+</ul>
+</li>
+</ul>
+<p>A <strong>style</strong> definition is a dict with 2 items:</p>
+<ul class="simple">
+<li><p>the name of the style (optional, if not present the attribute
+style:name of the definition is used),</p></li>
+<li><p>an XML definition of the ODF style, see list below.</p></li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">odsparsator</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021-2023, Jérôme Dumonteil.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

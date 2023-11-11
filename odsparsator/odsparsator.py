@@ -1,27 +1,24 @@
-#!/usr/bin/env python
-# Copyright 2021 Jérôme Dumonteil
+# Copyright 2021-2023 Jérôme Dumonteil
 # Licence: MIT
 # Authors: jerome.dumonteil@gmail.com
 """Generate a json file from an OpenDocument Format .ods file.
 
-When used as a script, odsparsator parses an .ods file and generates a json
+When used as a script, odsparsator parses a .ods file and generates a json
 file using the odfdo library.
 
-When used as a library, odsparsator parses an .ods file and returns a python
+When used as a library, odsparsator parses a .ods file and returns a python
 structure.
 
 The resulting data follow the format of the reverse odsgenerator.py script.
 """
 
-import sys
-import argparse
-from decimal import Decimal
 import json
+from decimal import Decimal
+from pathlib import Path
 
-import odfdo
 from odfdo import Document, Element
 
-__version__ = "1.3.0"
+__version__ = "1.8.0"
 
 
 BODY = "body"
@@ -43,62 +40,61 @@ NBROWSPAN = "table:number-rows-spanned"
 
 
 class ODSParsator:
-    def __init__(self, path, export_minimal=False, use_decimal=False, all_styles=False):
-        """Core class of odsparsator.
+    def __init__(
+        self,
+        export_minimal=False,
+        use_decimal=False,
+        all_styles=False,
+    ):
+        """Class in charge of parsing the .ods document..
 
-        The class parses the input .ods content. The result is available in
-        self.content. Use ODSParsator via the front-end function ods_to_json()
-        to save the content as json file.
+        Use ODSParsator via the front-end function ods_to_json() to save the
+        content as json file.
 
         Args:
-            path (ODF path): Input .ods file.
+            Boolean options
         """
-        self.doc = Document(path)
-        self.content = None
-        if not self.is_spreadsheet():
-            raise ValueError("Input file must be an .ods file.")
+        self.doc = None
+        self.body = []
+        self.styles = []
+        self.col_widths = {}
         self.export_full = not export_minimal
         self.use_decimal = use_decimal
         self.all_styles = all_styles
-        self.col_widths = self.collect_col_widths()
-        self.parse()
 
     def collect_col_widths(self):
-        """Collect all columns widths from styles.
-
-        Returns:
-            dict: Style name -> width string.
-        """
-        widths = {}
-        if self.export_full:
-            for style in self.doc.get_styles(family="table-column"):
-                try:
-                    widths[style.name] = style.get_properties("table-column")[
-                        "style:column-width"
-                    ]
-                except (KeyError, TypeError):
-                    pass
-        return widths
+        """Collect all columns widths from styles."""
+        self.col_widths = {}
+        if not self.export_full:
+            return
+        for style in self.doc.get_styles(family="table-column"):
+            try:
+                width = style.get_properties("table-column")["style:column-width"]
+                self.col_widths[style.name] = width
+            except (KeyError, TypeError):
+                pass
 
     def collect_all_styles(self):
         """Store all automatic styles of the document.
 
-        Returns:
-            list of dict: Name and definition of styles.
+        Styles are a list of dict: Name and definition of styles.
         """
-        styles = []
-        for s in self.doc.get_styles(automatic=True):
-            name = s.name
+        self.styles = []
+        for style in self.doc.get_styles(automatic=True):
+            name = style.name
             if name:
-                s.set_attribute("style:name", None)
-                styles.append({NAME: name, DEFINITION: s.serialize(pretty=True)})
-        return styles
+                style.set_attribute("style:name", None)
+                self.styles.append(
+                    {
+                        NAME: name,
+                        DEFINITION: style.serialize(pretty=True),
+                    }
+                )
 
     def collect_used_styles(self):
         """Store used automatic styles of the document.
 
-        Returns:
-            list of dict: Name and definition of styles.
+        Styles are a list of dict: Name and definition of styles.
         """
 
         styles_elements = {}
@@ -111,20 +107,21 @@ class ODSParsator:
                 style = styles_elements[name]
                 used_styles.add(name)
                 # add style dependacies
-                for k, v in style.attributes.items():
-                    if k.endswith("style-name"):
-                        store_style_name(v)
+                for key, value in style.attributes.items():
+                    if key.endswith("style-name"):
+                        store_style_name(value)
 
         def keep_style(item):
             if isinstance(item, dict):
                 store_style_name(item.get(STYLE))
 
-        for s in self.collect_all_styles():
-            name = s.get(NAME)
-            definition = s.get(DEFINITION)
+        self.collect_all_styles()
+        for style in self.styles:
+            name = style.get(NAME)
+            definition = style.get(DEFINITION)
             style = Element.from_tag(definition)
             styles_elements[name] = style
-        for table in self.content[BODY]:
+        for table in self.body:
             keep_style(table)
             for row in table[TABLE]:
                 if isinstance(row, dict):
@@ -134,40 +131,63 @@ class ODSParsator:
                     cells = row
                 for cell in cells:
                     keep_style(cell)
-        styles = []
+        self.styles = []
         for name in used_styles:
             style = styles_elements[name]
             if style.name:
                 style.set_attribute("style:name", None)
-            styles.append({NAME: name, DEFINITION: style.serialize(pretty=True)})
-        return styles
+            self.styles.append(
+                {
+                    NAME: name,
+                    DEFINITION: style.serialize(pretty=True),
+                }
+            )
+
+    def parse_document(self, document_path):
+        """Parse the input .ods file..
+
+        The result is available in self.content or self.content_json.
+
+        Args:
+            path (ODF path): Input .ods file.
+        """
+        self.load_document(document_path)
+        self.parse()
+
+    def load_document(self, document_path):
+        """Load the ODF file and checks its type."""
+        self.doc = Document(document_path)
+        if not self.is_spreadsheet():
+            raise ValueError("Input file must be a .ods file.")
 
     def parse(self):
-        """Parse the .ods content and store it in self.content."""
-        self.content = {BODY: []}
-        for t in self.doc.body.get_tables():
-            t.rstrip(aggressive=True)
-            self.content[BODY].append(self.parse_table(t))
+        """Parse the .ods content."""
+        self.collect_col_widths()
+        self.collect_tables()
         if self.export_full:
             if self.all_styles:
-                self.content[STYLES] = self.collect_all_styles()
+                self.collect_all_styles()
             else:
-                self.content[STYLES] = self.collect_used_styles()
+                self.collect_used_styles()
+
+    def collect_tables(self):
+        """Retrieve all tables of the input document."""
+        self.body = []
+        for table in self.doc.body.get_tables():
+            table.rstrip(aggressive=True)
+            self.parse_table(table)
 
     def parse_table(self, table):
-        """Parse the table content.
+        """Parse one table content.
 
         Args:
             table (odfdo.Table): Table object.
-
-        Returns:
-            dict: Python content of the table.
         """
         record = {NAME: table.name}
         record[TABLE] = [self.parse_row(row) for row in table.traverse()]
         if self.export_full:
             record[WIDTH] = self.columns_width(table)
-        return record
+        self.body.append(record)
 
     def columns_width(self, table):
         """Retrieve the table columsn widths.
@@ -182,10 +202,10 @@ class ODSParsator:
         widths = []
         for col in table.get_columns():
             style_name = col.style
-            w = self.col_widths.get(style_name)
-            if not w:
+            width = self.col_widths.get(style_name)
+            if not width:
                 break
-            widths.append(w)
+            widths.append(width)
         return widths
 
     @staticmethod
@@ -230,7 +250,7 @@ class ODSParsator:
             list or dict: Python content of the row.
         """
         style = row.style
-        cells = [self.parse_cell(c) for c in row.traverse()]
+        cells = [self.parse_cell(cell) for cell in row.traverse()]
         if style and self.export_full:
             return {ROW: cells, STYLE: style}
         return cells
@@ -295,12 +315,26 @@ class ODSParsator:
         """Check the ODF document is a spreadsheet"""
         return bool(self.doc.get_type() == "spreadsheet")
 
+    @property
+    def content(self):
+        """Python dict of the content."""
+        if self.export_full:
+            return {BODY: self.body, STYLES: self.styles}
+        else:
+            return {BODY: self.body}
+
+    @property
     def json_content(self):
         """JSON string of the content."""
-        return json.dumps(self.content, ensure_ascii=False, indent=4)
+        return json.dumps(self.content, ensure_ascii=False, indent=4, sort_keys=True)
 
 
-def ods_to_json(input_path, output_path, export_minimal=False, all_styles=False):
+def ods_to_json(
+    input_path,
+    output_path,
+    export_minimal=False,
+    all_styles=False,
+):
     """Parse the input file and save the result in a json file.
 
     The input file must be a .ods ODF file
@@ -311,14 +345,20 @@ def ods_to_json(input_path, output_path, export_minimal=False, all_styles=False)
         export_minimal (bool): Export only values, no styles or formula or col width.
         all_styles (bool): Collect all styles from the input.
     """
-    content = ODSParsator(input_path, export_minimal, False, all_styles).content
-    json_content = json.dumps(content, ensure_ascii=False, indent=4)
-    with open(output_path, "w", encoding="UTF-8") as f:
-        f.write(json_content)
+    parser = ODSParsator(
+        export_minimal=export_minimal,
+        use_decimal=False,
+        all_styles=all_styles,
+    )
+    parser.parse_document(input_path)
+    Path(output_path).write_text(parser.json_content, encoding="utf8")
 
 
 def ods_to_python(
-    input_path, export_minimal=False, use_decimal=False, all_styles=False
+    input_path,
+    export_minimal=False,
+    use_decimal=False,
+    all_styles=False,
 ):
     """Parse the input file and return the content as python structure.
 
@@ -333,59 +373,10 @@ def ods_to_python(
     Returns:
         dict or list: content as python structure
     """
-    return ODSParsator(input_path, export_minimal, use_decimal, all_styles).content
-
-
-def check_odfdo_version():
-    """Utility to verify we have the minimal version of the odfdo library."""
-    if tuple(int(x) for x in odfdo.__version__.split(".")) > (3, 3, 0):
-        return True
-    print("Error: I need odfdo version >= 3.3.0")
-    return False
-
-
-def main():
-    """Read parameters from STDIN and apply the required command.
-
-    Usage:
-       odsparsator [-h] [--version] [options] input_file output_file
-
-    Arguments:
-        input_file: Input file, a .ods file.
-
-        output_file: Output file, json file generated from input.
-    """
-    if not check_odfdo_version():
-        sys.exit(1)
-    parser = argparse.ArgumentParser(
-        description="Generate a json file from an OpenDocument Format .ods file.",
-        formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog=__doc__,
+    parser = ODSParsator(
+        export_minimal=export_minimal,
+        use_decimal=use_decimal,
+        all_styles=all_styles,
     )
-    parser.add_argument(
-        "--version", action="version", version="%(prog)s " + __version__
-    )
-    parser.add_argument(
-        "input_file", help="input file containing data in json or yaml format"
-    )
-    parser.add_argument(
-        "output_file", help="output file, .ods file generated from input"
-    )
-    parser.add_argument(
-        "-m",
-        "--minimal",
-        help="keep only rows and cells, no styles, no formula, no col width",
-        action="store_true",
-    )
-    parser.add_argument(
-        "-a",
-        "--all-styles",
-        help="collect all styles from the input",
-        action="store_true",
-    )
-    args = parser.parse_args()
-    ods_to_json(args.input_file, args.output_file, args.minimal, args.all_styles)
-
-
-if __name__ == "__main__":
-    main()
+    parser.parse_document(input_path)
+    return parser.content
