@@ -26,18 +26,25 @@ License:
 
 ## Installation
 
-Installation from Pypi (recommended):
+This the minimal "one file version".
 
+- no install required for the main script, juste launch it as
 
-```python
-pip install odsparsator
+```
+python odsparsator.py
 ```
 
-Installation from sources (requiring setuptools):
+- BUT you need to check that you use Python version >= 3.9 and install manually (with pip) the 2 dependencies:
 
-```python
-pip install .
+    - odfdo  (version >=3.4)
+    - lxml   (version ~4.0)
+
+For this branch with only the .py script, if you want to test something, you need to make tests manually like:
+
 ```
+python odsparsator.py -m test_data/json.ods  result.json
+```
+
 
 ## CLI usage
 
