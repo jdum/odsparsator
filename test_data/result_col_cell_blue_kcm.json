@@ -1,0 +1,51 @@
+{
+    "body": [
+        {
+            "name": "Sheet1",
+            "table": [
+                [
+                    {
+                        "bgcolor": "#2a6099",
+                        "value": null
+                    },
+                    {
+                        "bgcolor": "#2a6099",
+                        "value": null
+                    },
+                    {
+                        "bgcolor": "#2a6099",
+                        "value": null
+                    }
+                ],
+                [
+                    {
+                        "bgcolor": "#2a6099",
+                        "value": null
+                    },
+                    {
+                        "bgcolor": "#ffff00",
+                        "value": null
+                    },
+                    {
+                        "bgcolor": "#2a6099",
+                        "value": null
+                    }
+                ],
+                [
+                    {
+                        "bgcolor": "#2a6099",
+                        "value": null
+                    },
+                    {
+                        "bgcolor": "#2a6099",
+                        "value": null
+                    },
+                    {
+                        "bgcolor": "#2a6099",
+                        "value": null
+                    }
+                ]
+            ]
+        }
+    ]
+}

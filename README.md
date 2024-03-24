@@ -11,40 +11,37 @@ structure.
 The resulting data follows the format of the reverse `odsgenerator.py` script,
 see https://github.com/jdum/odsgenerator
 
-
 `odsparsator` is a `Python3` package, using the [odfdo](https://github.com/jdum/odfdo) library. Current version requires Python >= 3.9, see prior versions for older environments.
 
 Project:
-    https://github.com/jdum/odsparsator
+https://github.com/jdum/odsparsator
 
 Author:
-    jerome.dumonteil@gmail.com
+jerome.dumonteil@gmail.com
 
 License:
-    MIT
-
+MIT
 
 ## Installation
 
 This the minimal "one file version".
 
-- no install required for the main script, juste launch it as
+-   no install required for the main script, juste launch it as
 
 ```
 python odsparsator.py
 ```
 
-- BUT you need to check that you use Python version >= 3.9 and install manually (with pip) the 2 dependencies:
+-   BUT you need to check that you use Python version >= 3.9 and install manually (with pip) the 2 dependencies:
 
-    - odfdo  (version >=3.4)
-    - lxml   (version ~4.0)
+    -   odfdo (version >=3.7.5)
+    -   lxml (version ~5.0)
 
 For this branch with only the .py script, if you want to test something, you need to make tests manually like:
 
 ```
 python odsparsator.py -m test_data/json.ods  result.json
 ```
-
 
 ## CLI usage
 
@@ -58,11 +55,22 @@ odsparsator [-h] [--version] [options] input_file output_file
 
 `output_file`: output file, JSON file generated from input.
 
-Use ``odsparsator --help`` for more details about options.
+Use `odsparsator --help` for options:
 
+```
+options:
+  -h, --help         show this help message and exit
+  --version          show program's version number and exit
+  -m, --minimal      keep only rows and cells, no styles, no formula, no column width
+  -a, --all-styles   collect all styles from the input
+  -c, --color        collect background color of cells
+  -k, --keep-styled  keep styled cells with empty value
+
+```
 
 ### sample
-------
+
+---
 
 ```sh
 $ odsparsator --minimal sample.ods sample_minimal.json
@@ -111,9 +119,7 @@ The result:
                         ...
 ```
 
-
 ## Usage from python code
-
 
 ```python
 import odsparsator
@@ -121,14 +127,11 @@ import odsparsator
 content = odsparsator.ods_to_python("sample1.ods")
 ```
 
-
 ## Documentation
 
 See in the `./doc` folder:
 
-
 `html/odsparsator.html`
-
 
 ## License
 
