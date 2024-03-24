@@ -2,7 +2,7 @@ import json
 import re
 import subprocess
 from pathlib import Path
-
+import shlex
 from odsparsator.cli import check_odfdo_version
 
 RE_VERS = re.compile(r' *version *= *"(\S+)"$')
@@ -63,6 +63,34 @@ def test_generate(tmp_path):
     dest = tmp_path / "minimal.json"
     dest.unlink(missing_ok=True)
     command = ["odsparsator", "-m", str(FILE_MINIMAL), str(dest)]
+    out, err, exitcode = capture(command)
+    assert exitcode == 0
+    assert err == b""
+    assert out == b""
+    assert dest.is_file()
+    content = json.loads(dest.read_text(encoding="utf8"))
+    assert "body" in content
+    assert len(content["body"]) == 2
+
+
+def test_generate_keep(tmp_path):
+    dest = tmp_path / "minimal.json"
+    dest.unlink(missing_ok=True)
+    command = shlex.split(f"odsparsator -m -k {FILE_MINIMAL} {dest}")
+    out, err, exitcode = capture(command)
+    assert exitcode == 0
+    assert err == b""
+    assert out == b""
+    assert dest.is_file()
+    content = json.loads(dest.read_text(encoding="utf8"))
+    assert "body" in content
+    assert len(content["body"]) == 2
+
+
+def test_generate_keep_color(tmp_path):
+    dest = tmp_path / "minimal.json"
+    dest.unlink(missing_ok=True)
+    command = shlex.split(f"odsparsator -m -k -c {FILE_MINIMAL} {dest}")
     out, err, exitcode = capture(command)
     assert exitcode == 0
     assert err == b""
