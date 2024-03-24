@@ -1,8 +1,9 @@
 import json
 import re
+import shlex
 import subprocess
 from pathlib import Path
-import shlex
+
 from odsparsator.cli import check_odfdo_version
 
 RE_VERS = re.compile(r' *version *= *"(\S+)"$')
@@ -11,7 +12,7 @@ FILE_MINIMAL = DATA / "minimal.ods"
 
 
 def read_proj_version():
-    pyproject = Path("__file__").parent.parent / "pyproject.toml"
+    pyproject = Path(__file__).parent.parent / "pyproject.toml"
     with open(pyproject) as content:
         for line in content:
             if group := RE_VERS.match(line):
