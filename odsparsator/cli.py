@@ -62,8 +62,20 @@ def main():  # pragma: no cover
         help="collect all styles from the input",
         action="store_true",
     )
+    parser.add_argument(
+        "-c",
+        "--color",
+        help="collect background color of cells",
+        action="store_true",
+    )
     args = parser.parse_args()
-    ods_to_json(args.input_file, args.output_file, args.minimal, args.all_styles)
+    ods_to_json(
+        args.input_file,
+        args.output_file,
+        args.minimal,
+        args.all_styles,
+        args.color,
+    )
 
 
 if __name__ == "__main__":

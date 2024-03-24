@@ -12,11 +12,16 @@ structure.
 The resulting data follow the format of the reverse odsgenerator.py script.
 """
 
+from functools import cache
 import json
 from decimal import Decimal
 from pathlib import Path
 
 from odfdo import Document, Element
+from odfdo.cell import Cell
+from odfdo.document import Table
+from odfdo.frame import Any
+from odfdo.row import Row
 
 __version__ = "1.9.0"
 
@@ -26,6 +31,7 @@ TABLE = "table"
 ROW = "row"
 VALUE = "value"
 FORMULA = "formula"
+BGCOLOR = "bgcolor"
 COLSPAN = "colspanned"
 ROWSPAN = "rowspanned"
 NAME = "name"
@@ -34,6 +40,7 @@ WIDTH = "width"
 SPAN = "span"
 STYLE = "style"
 STYLES = "styles"
+DEFAULT_BGCOLOR = "#ffffff"
 
 NBCOLSPAN = "table:number-columns-spanned"
 NBROWSPAN = "table:number-rows-spanned"
@@ -45,6 +52,7 @@ class ODSParsator:
         export_minimal=False,
         use_decimal=False,
         all_styles=False,
+        colors=False,
     ):
         """Class in charge of parsing the .ods document..
 
@@ -61,6 +69,10 @@ class ODSParsator:
         self.export_full = not export_minimal
         self.use_decimal = use_decimal
         self.all_styles = all_styles
+        self.colors = colors
+        self._default_bgcolor = ""
+        self._current_table = None
+        self._current_table_column_cache = {}
 
     def collect_col_widths(self):
         """Collect all columns widths from styles."""
@@ -173,8 +185,11 @@ class ODSParsator:
     def collect_tables(self):
         """Retrieve all tables of the input document."""
         self.body = []
+        aggressive = not self.colors
         for table in self.doc.body.get_tables():
-            table.rstrip(aggressive=True)
+            self._current_table_column_cache = {}
+            self._current_table = table  # for default bgcolor
+            table.rstrip(aggressive=aggressive)
             self.parse_table(table)
 
     def parse_table(self, table):
@@ -250,7 +265,10 @@ class ODSParsator:
             list or dict: Python content of the row.
         """
         style = row.style
-        cells = [self.parse_cell(cell) for cell in row.traverse()]
+        if self.colors:
+            cells = [self.parse_cell_color(row, cell) for cell in row.traverse()]
+        else:
+            cells = [self.parse_cell(cell) for cell in row.traverse()]
         if style and self.export_full:
             return {ROW: cells, STYLE: style}
         return cells
@@ -264,7 +282,6 @@ class ODSParsator:
         Returns:
             value or dict: Python content of the cell.
         """
-
         if self.use_decimal:
             value = cell.get_value()
         else:
@@ -276,7 +293,7 @@ class ODSParsator:
         else:
             style = None
             formula = None
-        if not spanned and not style and not formula:
+        if not spanned and not style and not formula and not self.colors:
             return value
         record = {VALUE: value}
         if style:
@@ -286,6 +303,100 @@ class ODSParsator:
         if formula:
             record[FORMULA] = formula
         return record
+
+    def parse_cell_color(self, row: Row, cell: Cell) -> dict[str, Any]:
+        """Parse the cell content, including cell background color.
+
+        Args:
+            row (odfdo.Row): Row object.
+            cell (odfdo.Cell): Cell object.
+
+        Returns:
+            dict: Python content of the cell.
+        """
+        record = self.parse_cell(cell)
+        record[BGCOLOR] = self.cell_bgcolor(row, cell)
+        return record
+
+    @cache
+    def _style_cell_properties(self, family: str, style: str) -> dict[str, Any]:
+        return self.doc.get_style_properties(family, style, "table-cell") or {}
+
+    def _column_bgcolor(self, column_nb: int) -> str:
+        if column_nb in self._current_table_column_cache:
+            return self._current_table_column_cache[column_nb]
+        column = self._current_table.get_column(column_nb)
+        if style := column.get_default_cell_style():
+            props = self._style_cell_properties("table-cell", style)
+            color = props.get("fo:background-color", DEFAULT_BGCOLOR)
+        else:
+            color = DEFAULT_BGCOLOR
+        self._current_table_column_cache[column_nb] = color
+        return color
+
+    def cell_bgcolor(self, row: Row, cell: Cell) -> str:
+        if cell.style:
+            props = self._style_cell_properties("table-cell", cell.style)
+            return props.get("fo:background-color", DEFAULT_BGCOLOR)
+        if row.style:
+            props = self._style_cell_properties("table-row", row.style)
+            if props:
+                return props.get("fo:background-color", DEFAULT_BGCOLOR)
+        return self._column_bgcolor(cell.x)
+
+    def get_cell_style_properties(
+        self, table: str | int, coord: tuple | list | str
+    ) -> dict[str, str]:  # type: ignore
+        """Return the style properties of a table cell of a .ods document,
+        from the cell style or from the row style."""
+
+        def _get_table(table: int | str) -> Table | None:
+            table_pos = 0
+            table_name = None
+            if isinstance(table, int):
+                table_pos = table
+            elif isinstance(table, str):
+                table_name = table_name
+            else:
+                raise TypeError(f"Table parameter must be int or str: {table!r}")
+            return self.body.get_table(
+                position=table_pos, name=table_name  # type: ignore
+            )
+
+        if not (sheet := _get_table(table)):
+            return {}
+        cell = sheet.get_cell(coord, clone=False)
+        if cell.style:
+            return (
+                self.get_style_properties("table-cell", cell.style, "table-cell") or {}
+            )
+        try:
+            row = sheet.get_row(cell.y, clone=False, create=False)  # type: ignore
+            if row.style:  # noqa: SIM102
+                if props := self.get_style_properties(
+                    "table-row", row.style, "table-cell"
+                ):
+                    return props
+            column = sheet.get_column(cell.x)  # type: ignore
+            if style := column.get_default_cell_style():
+                return (
+                    self.get_style_properties("table-cell", style, "table-cell") or {}
+                )
+        except ValueError:
+            return {}
+
+    def get_cell_background_color(
+        self,
+        table: str | int,
+        coord: tuple | list | str,
+        default: str = "#ffffff",
+    ) -> str:
+        """Return the background color of a table cell of a .ods document,
+        from the cell style, or from the row or column.
+
+        If color is not defined, return default value."""
+        found = self.get_cell_style_properties(table, coord).get("fo:background-color")
+        return found or default
 
     @staticmethod
     def spanned(cell):
@@ -333,6 +444,7 @@ def ods_to_json(
     output_path,
     export_minimal=False,
     all_styles=False,
+    colors=False,
 ):
     """Parse the input file and save the result in a json file.
 
@@ -343,11 +455,13 @@ def ods_to_json(
         output_path (str or Path or BytesIO): Path of the json output file.
         export_minimal (bool): Export only values, no styles or formula or col width.
         all_styles (bool): Collect all styles from the input.
+        colors (bool): Collect background color of cells.
     """
     parser = ODSParsator(
         export_minimal=export_minimal,
         use_decimal=False,
         all_styles=all_styles,
+        colors=colors,
     )
     parser.parse_document(input_path)
     Path(output_path).write_text(parser.json_content, encoding="utf8")
@@ -358,6 +472,7 @@ def ods_to_python(
     export_minimal=False,
     use_decimal=False,
     all_styles=False,
+    colors=False,
 ):
     """Parse the input file and return the content as python structure.
 
@@ -368,6 +483,7 @@ def ods_to_python(
         export_minimal (bool): Export only values, no styles or formula or col width.
         use_decimal (bool): Use Decimal(), DateTime() for the cell values.
         all_styles (bool): Collect all styles from the input.
+        colors (bool): Collect background color of cells.
 
     Returns:
         dict or list: content as python structure
@@ -376,6 +492,7 @@ def ods_to_python(
         export_minimal=export_minimal,
         use_decimal=use_decimal,
         all_styles=all_styles,
+        colors=colors,
     )
     parser.parse_document(input_path)
     return parser.content

@@ -5,9 +5,9 @@
             "table": [
                 [
                     {
-                        "value": "spanned cell",
                         "colspanned": 3,
-                        "rowspanned": 2
+                        "rowspanned": 2,
+                        "value": "spanned cell"
                     },
                     null,
                     null,
@@ -16,9 +16,9 @@
                     "f",
                     "g",
                     {
-                        "value": "h",
                         "colspanned": 2,
-                        "rowspanned": 2
+                        "rowspanned": 2,
+                        "value": "h"
                     },
                     null,
                     "j"
@@ -42,16 +42,18 @@
                     31,
                     41,
                     {
-                        "value": 51,
                         "colspanned": 1,
-                        "rowspanned": 2
+                        "rowspanned": 2,
+                        "value": 51
                     },
                     61,
                     {
-                        "value": 71,
                         "colspanned": 3,
-                        "rowspanned": 1
-                    }
+                        "rowspanned": 1,
+                        "value": 71
+                    },
+                    null,
+                    null
                 ],
                 [
                     2,
