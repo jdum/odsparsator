@@ -3,6 +3,7 @@
 # Authors: jerome.dumonteil@gmail.com
 """CLI interface to odsparsator.
 """
+from __future__ import annotations
 
 import argparse
 import sys
@@ -11,10 +12,10 @@ import odfdo
 
 from odsparsator.odsparsator import __doc__, __version__, ods_to_json
 
-ODFDO_REQUIREMENT = (3, 5, 0)
+ODFDO_REQUIREMENT = (3, 7, 5)
 
 
-def check_odfdo_version():
+def check_odfdo_version() -> bool:
     """Utility to verify we have the minimal version of the odfdo library."""
     if tuple(int(x) for x in odfdo.__version__.split(".")) >= ODFDO_REQUIREMENT:
         return True
@@ -25,7 +26,7 @@ def check_odfdo_version():
     return False  # pragma: no cover
 
 
-def main():  # pragma: no cover
+def main() -> None:  # pragma: no cover
     """Read parameters from STDIN and apply the required command.
 
     Usage:
@@ -68,6 +69,12 @@ def main():  # pragma: no cover
         help="collect background color of cells",
         action="store_true",
     )
+    parser.add_argument(
+        "-k",
+        "--keep-styled",
+        help="keep styled cells with empty value",
+        action="store_true",
+    )
     args = parser.parse_args()
     ods_to_json(
         args.input_file,
@@ -75,6 +82,7 @@ def main():  # pragma: no cover
         args.minimal,
         args.all_styles,
         args.color,
+        args.keep_styled,
     )
 
 
