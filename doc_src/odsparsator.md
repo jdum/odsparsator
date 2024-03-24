@@ -51,7 +51,18 @@ odsparsator [-h] [--version] [options] input_file output_file
 
 `output_file`: output file, JSON file generated from input.
 
-Use ``odsparsator --help`` for more details about options.
+Use ``odsparsator --help`` for options:
+
+```
+options:
+  -h, --help         show this help message and exit
+  --version          show program's version number and exit
+  -m, --minimal      keep only rows and cells, no styles, no formula, no column width
+  -a, --all-styles   collect all styles from the input
+  -c, --color        collect background color of cells
+  -k, --keep-styled  keep styled cells with empty value
+
+```
 
 
 ### sample
