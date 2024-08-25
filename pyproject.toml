@@ -1,24 +1,24 @@
 [tool.poetry]
 name = "odsparsator"
-version = "1.10.0"
+version = "1.11.0"
 description = "Generate a json file from an OpenDocument Format .ods file"
 license = "MIT"
 keywords = ["openDocument", "ODF", "ods", "json", "spreadsheet", "parser"]
 classifiers = [
-        "Development Status :: 5 - Production/Stable",
-        "Environment :: Console",
-        "Intended Audience :: Developers",
-        "License :: OSI Approved :: MIT License",
-        "Programming Language :: Python",
-        "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3 :: Only",
-        "Programming Language :: Python :: 3.9",
-        "Programming Language :: Python :: 3.10",
-        "Programming Language :: Python :: 3.11",
-        "Programming Language :: Python :: 3.12",
-        "Operating System :: OS Independent",
-        "Topic :: Text Processing",
-        "Topic :: Software Development :: Libraries :: Python Modules",
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Topic :: Text Processing",
+    "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 homepage = "https://github.com/jdum/odsparsator"
 repository = "https://github.com/jdum/odsparsator"
@@ -31,23 +31,22 @@ odsparsator = "odsparsator.cli:main"
 
 [tool.poetry.dependencies]
 python = ">=3.9,<4"
-odfdo = ">=3.7.5"
+odfdo = ">=3.7.7"
 
 [tool.poetry.group.docs.dependencies]
 sphinx = ">=7.0"
 myst-parser = ">=2.0.0"
 
 [tool.poetry.group.dev.dependencies]
-poetry = ">=1.8"
-pytest = ">=7.0"
+poetry = "~1.8"
+pytest = ">=8.0"
 tox = ">=4"
-ruff = ">=0.3.4"
-black = ">=24.0"
-isort = ">=5.0"
+ruff = ">=0.5.0"
+isort = ">=5.13.0"
 coverage = ">=7.0"
 
 [build-system]
-requires = ["poetry-core>=1.6.0"]
+requires = ["poetry-core>=1.8.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.black]
@@ -58,61 +57,58 @@ target-version = ['py312']
 profile = "black"
 
 [tool.ruff]
-target-version = "py312"
-line-length = 88
-fix = false
 lint.select = [
-        # flake8-2020
-        "YTT",
-        # flake8-bandit
-        "S",
-        # flake8-bugbear
-        "B",
-        # flake8-builtins
-        "A",
-        # flake8-comprehensions
-        "C4",
-        # flake8-debugger
-        "T10",
-        # flake8-simplify
-        "SIM",
-        # isort
-        "I",
-        # mccabe
-        "C90",
-        # pycodestyle
-        "E",
-        "W",
-        # pyflakes
-        "F",
-        # pygrep-hooks
-        "PGH",
-        # pyupgrade
-        "UP",
-        # ruff
-        "RUF",
-        # tryceratops
-        "TRY",
+    # flake8-2020
+    "YTT",
+    # flake8-bandit
+    "S",
+    # flake8-bugbear
+    "B",
+    # flake8-builtins
+    "A",
+    # flake8-comprehensions
+    "C4",
+    # flake8-debugger
+    "T10",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+    # mccabe
+    "C90",
+    # pycodestyle
+    "E",
+    "W",
+    # pyflakes
+    "F",
+    # pygrep-hooks
+    "PGH",
+    # pyupgrade
+    "UP",
+    # ruff
+    "RUF",
+    # tryceratops
+    "TRY",
 ]
 lint.ignore = [
-        # LineTooLong
-        "E501",
-        # DoNotAssignLambda
-        "E731",
-        # Use specific rule codes when ignoring type issues
-        "PGH003",
-        # check for execution of untrusted input
-        "S603",
-        # Class attribute `open` is shadowing a Python builtin
-        "A003",
-        # Use `X | Y` in `isinstance` call instead of `(X, Y)`
-        "UP038",
-        # Avoid specifying long messages outside the exception class
-        "TRY003",
-        # Use ternary operator
-        "SIM108",
-        # Use of `assert` detected
-        "S101",
+    # LineTooLong
+    "E501",
+    # DoNotAssignLambda
+    "E731",
+    # Use specific rule codes when ignoring type issues
+    "PGH003",
+    # check for execution of untrusted input
+    "S603",
+    # Class attribute `open` is shadowing a Python builtin
+    "A003",
+    # Use `X | Y` in `isinstance` call instead of `(X, Y)`
+    "UP038",
+    # Avoid specifying long messages outside the exception class
+    "TRY003",
+    # Use ternary operator
+    "SIM108",
+    # Use of `assert` detected
+    "S101",
 ]
 
 [tool.ruff.lint.per-file-ignores]
@@ -126,5 +122,5 @@ branch = true
 source = ["odsparsator"]
 
 [tool.pytest.ini_options]
-minversion = "7.0"
+minversion = "8.0"
 testpaths = ["tests"]

@@ -23,7 +23,7 @@ from odfdo.cell import Cell
 from odfdo.document import Table
 from odfdo.row import Row
 
-__version__ = "1.10.0"
+__version__ = "1.11.0"
 
 
 BODY = "body"

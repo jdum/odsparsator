@@ -1,6 +1,5 @@
 import json
 import re
-import shlex
 import subprocess
 from pathlib import Path
 
@@ -77,7 +76,7 @@ def test_generate(tmp_path):
 def test_generate_keep(tmp_path):
     dest = tmp_path / "minimal.json"
     dest.unlink(missing_ok=True)
-    command = shlex.split(f"odsparsator -m -k {FILE_MINIMAL} {dest}")
+    command = ["odsparsator", "-m", "-k", str(FILE_MINIMAL), str(dest)]
     out, err, exitcode = capture(command)
     assert exitcode == 0
     assert err == b""
@@ -91,7 +90,7 @@ def test_generate_keep(tmp_path):
 def test_generate_keep_color(tmp_path):
     dest = tmp_path / "minimal.json"
     dest.unlink(missing_ok=True)
-    command = shlex.split(f"odsparsator -m -k -c {FILE_MINIMAL} {dest}")
+    command = ["odsparsator", "-m", "-k", "-c", str(FILE_MINIMAL), str(dest)]
     out, err, exitcode = capture(command)
     assert exitcode == 0
     assert err == b""

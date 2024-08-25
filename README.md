@@ -120,7 +120,7 @@ The result:
 
 
 ```python
-import odsparsator
+from odsparsator import odsparsator
 
 content = odsparsator.ods_to_python("sample1.ods")
 ```
