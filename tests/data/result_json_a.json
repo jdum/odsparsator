@@ -12,186 +12,133 @@
                             "value": "spanned cell"
                         },
                         {
-                            "style": "left",
+                            "style": "ce2",
                             "value": null
                         },
                         {
-                            "style": "left",
+                            "style": "ce2",
                             "value": null
                         },
                         {
-                            "style": "left",
+                            "style": "ce2",
                             "value": "d"
                         },
                         {
-                            "style": "left",
+                            "style": "ce2",
                             "value": "e"
                         },
+                        "f",
                         {
-                            "style": "left",
-                            "value": "f"
-                        },
-                        {
-                            "style": "left",
+                            "style": "ce2",
                             "value": "g"
                         },
                         {
                             "colspanned": 2,
                             "rowspanned": 2,
-                            "style": "left",
                             "value": "h"
                         },
+                        null,
                         {
-                            "style": "left",
-                            "value": null
-                        },
-                        {
-                            "style": "left",
+                            "style": "ce2",
                             "value": "j"
                         }
                     ],
-                    "style": "table_row_1cm"
+                    "style": "ro1"
                 },
                 {
                     "row": [
                         {
-                            "style": "left",
+                            "style": "ce2",
                             "value": null
                         },
                         {
-                            "style": "left",
+                            "style": "ce2",
                             "value": null
                         },
                         {
-                            "style": "left",
+                            "style": "ce2",
                             "value": null
                         },
+                        30,
+                        40,
                         {
-                            "style": "right",
-                            "value": 30
-                        },
-                        {
-                            "style": "right",
-                            "value": 40
-                        },
-                        {
-                            "style": "right",
+                            "style": "ce3",
                             "value": 50
                         },
-                        {
-                            "style": "right",
-                            "value": 60
-                        },
-                        {
-                            "style": "left",
-                            "value": null
-                        },
-                        {
-                            "style": "left",
-                            "value": null
-                        },
-                        {
-                            "style": "right",
-                            "value": 90
-                        }
+                        60,
+                        null,
+                        null,
+                        90
                     ],
-                    "style": "table_row_1cm"
+                    "style": "ro1"
                 },
                 {
                     "row": [
-                        {
-                            "style": "right",
-                            "value": 1
-                        },
-                        {
-                            "style": "right",
-                            "value": 11
-                        },
-                        {
-                            "style": "right",
-                            "value": 21
-                        },
-                        {
-                            "style": "right",
-                            "value": 31
-                        },
-                        {
-                            "style": "right",
-                            "value": 41
-                        },
+                        1,
+                        11,
+                        21,
+                        31,
+                        41,
                         {
                             "colspanned": 1,
                             "rowspanned": 2,
-                            "style": "right",
+                            "style": "ce3",
                             "value": 51
                         },
-                        {
-                            "style": "right",
-                            "value": 61
-                        },
+                        61,
                         {
                             "colspanned": 3,
                             "rowspanned": 1,
-                            "style": "right",
+                            "style": "ce3",
                             "value": 71
                         },
-                        null,
-                        null
+                        {
+                            "style": "Default",
+                            "value": null
+                        },
+                        {
+                            "style": "Default",
+                            "value": null
+                        }
                     ],
-                    "style": "table_row_1cm"
+                    "style": "ro1"
                 },
                 {
                     "row": [
+                        2,
+                        12,
+                        22,
+                        32,
+                        42,
                         {
-                            "style": "right",
-                            "value": 2
-                        },
-                        {
-                            "style": "right",
-                            "value": 12
-                        },
-                        {
-                            "style": "right",
-                            "value": 22
-                        },
-                        {
-                            "style": "right",
-                            "value": 32
-                        },
-                        {
-                            "style": "right",
-                            "value": 42
-                        },
-                        {
-                            "style": "right",
+                            "style": "ce3",
                             "value": 52
                         },
+                        62,
                         {
-                            "style": "right",
-                            "value": 62
-                        },
-                        {
-                            "style": "right",
+                            "style": "ce3",
                             "value": 72
                         },
                         {
-                            "style": "right",
+                            "style": "ce3",
                             "value": 82
                         },
-                        {
-                            "style": "right",
-                            "value": 92
-                        }
+                        92
                     ],
-                    "style": "table_row_1cm"
+                    "style": "ro1"
                 }
             ],
             "width": [
                 "1cm",
                 "2cm",
                 "3cm",
-                "4cm",
-                "2cm"
+                "4.001cm",
+                "2cm",
+                "2.258cm",
+                "2.258cm",
+                "2.258cm",
+                "2.258cm",
+                "2.258cm"
             ]
         },
         {
@@ -199,48 +146,18 @@
             "table": [
                 {
                     "row": [
-                        {
-                            "style": "bold_left_bg_gray_grid_06pt",
-                            "value": "a"
-                        },
-                        {
-                            "style": "bold_left_bg_gray_grid_06pt",
-                            "value": "b"
-                        },
-                        {
-                            "style": "bold_left_bg_gray_grid_06pt",
-                            "value": "c"
-                        },
-                        {
-                            "style": "bold_left_bg_gray_grid_06pt",
-                            "value": "d"
-                        },
-                        {
-                            "style": "bold_left_bg_gray_grid_06pt",
-                            "value": "e"
-                        },
-                        {
-                            "style": "bold_left_bg_gray_grid_06pt",
-                            "value": "f"
-                        },
-                        {
-                            "style": "bold_left_bg_gray_grid_06pt",
-                            "value": "g"
-                        },
-                        {
-                            "style": "bold_left_bg_gray_grid_06pt",
-                            "value": "h"
-                        },
-                        {
-                            "style": "bold_left_bg_gray_grid_06pt",
-                            "value": "i"
-                        },
-                        {
-                            "style": "bold_left_bg_gray_grid_06pt",
-                            "value": "j"
-                        }
+                        "a",
+                        "b",
+                        "c",
+                        "d",
+                        "e",
+                        "f",
+                        "g",
+                        "h",
+                        "i",
+                        "j"
                     ],
-                    "style": "default_table_row"
+                    "style": "ro2"
                 },
                 {
                     "row": [
@@ -285,7 +202,7 @@
                             "value": 190
                         }
                     ],
-                    "style": "default_table_row"
+                    "style": "ro2"
                 },
                 {
                     "row": [
@@ -330,7 +247,7 @@
                             "value": 191
                         }
                     ],
-                    "style": "default_table_row"
+                    "style": "ro2"
                 },
                 {
                     "row": [
@@ -375,137 +292,196 @@
                             "value": 192
                         }
                     ],
-                    "style": "default_table_row"
+                    "style": "ro2"
                 }
             ],
             "width": [
-                "2.5cm"
+                "2.499cm",
+                "2.258cm",
+                "2.258cm",
+                "2.258cm",
+                "2.258cm",
+                "2.258cm",
+                "2.258cm",
+                "2.258cm",
+                "2.258cm",
+                "2.258cm"
+            ]
+        },
+        {
+            "name": "third tab",
+            "table": [
+                {
+                    "row": [
+                        "int",
+                        42
+                    ],
+                    "style": "ro2"
+                },
+                {
+                    "row": [
+                        "date",
+                        {
+                            "style": "ce10",
+                            "value": "2024-01-25"
+                        }
+                    ],
+                    "style": "ro2"
+                },
+                {
+                    "row": [
+                        "time",
+                        {
+                            "style": "ce11",
+                            "value": "PT09H10M00S"
+                        }
+                    ],
+                    "style": "ro2"
+                },
+                {
+                    "row": [
+                        "bool",
+                        {
+                            "style": "ce12",
+                            "value": true
+                        }
+                    ],
+                    "style": "ro2"
+                }
+            ],
+            "width": [
+                "2.258cm",
+                "2.258cm"
             ]
         }
     ],
     "styles": [
         {
-            "definition": "<style:font-face svg:font-family=\"'DejaVu Sans'\" style:font-pitch=\"variable\"/>\n",
-            "name": "DejaVu Sans"
-        },
-        {
             "definition": "<style:font-face svg:font-family=\"Arial\" style:font-family-generic=\"swiss\" style:font-pitch=\"variable\"/>\n",
             "name": "Arial"
+        },
+        {
+            "definition": "<style:font-face svg:font-family=\"'Arial Unicode MS'\" style:font-family-generic=\"system\" style:font-pitch=\"variable\"/>\n",
+            "name": "Arial Unicode MS"
+        },
+        {
+            "definition": "<style:font-face svg:font-family=\"'DejaVu Sans'\" style:font-pitch=\"variable\"/>\n",
+            "name": "DejaVu Sans"
         },
         {
             "definition": "<style:font-face svg:font-family=\"'Liberation Sans'\" style:font-family-generic=\"swiss\" style:font-pitch=\"variable\"/>\n",
             "name": "Liberation Sans"
         },
         {
-            "definition": "<style:font-face svg:font-family=\"Tahoma\" style:font-family-generic=\"system\" style:font-pitch=\"variable\"/>\n",
-            "name": "Tahoma"
+            "definition": "<style:font-face svg:font-family=\"'PingFang SC'\" style:font-family-generic=\"system\" style:font-pitch=\"variable\"/>\n",
+            "name": "PingFang SC"
         },
         {
-            "definition": "<style:style style:family=\"table-column\">\n  <style:table-column-properties fo:break-before=\"auto\" style:column-width=\"22.58mm\"/>\n</style:style>\n",
+            "definition": "<style:style style:family=\"table-column\">\n  <style:table-column-properties fo:break-before=\"auto\" style:column-width=\"1cm\"/>\n</style:style>\n",
             "name": "co1"
         },
         {
-            "definition": "<style:style style:family=\"table-row\">\n  <style:table-row-properties style:row-height=\"4.52mm\" fo:break-before=\"auto\" style:use-optimal-row-height=\"true\"/>\n</style:style>\n",
+            "definition": "<style:style style:family=\"table-column\">\n  <style:table-column-properties fo:break-before=\"auto\" style:column-width=\"2cm\"/>\n</style:style>\n",
+            "name": "co2"
+        },
+        {
+            "definition": "<style:style style:family=\"table-column\">\n  <style:table-column-properties fo:break-before=\"auto\" style:column-width=\"3cm\"/>\n</style:style>\n",
+            "name": "co3"
+        },
+        {
+            "definition": "<style:style style:family=\"table-column\">\n  <style:table-column-properties fo:break-before=\"auto\" style:column-width=\"4.001cm\"/>\n</style:style>\n",
+            "name": "co4"
+        },
+        {
+            "definition": "<style:style style:family=\"table-column\">\n  <style:table-column-properties fo:break-before=\"auto\" style:column-width=\"2.258cm\"/>\n</style:style>\n",
+            "name": "co5"
+        },
+        {
+            "definition": "<style:style style:family=\"table-column\">\n  <style:table-column-properties fo:break-before=\"auto\" style:column-width=\"2.499cm\"/>\n</style:style>\n",
+            "name": "co6"
+        },
+        {
+            "definition": "<style:style style:family=\"table-row\">\n  <style:table-row-properties style:row-height=\"1cm\" fo:break-before=\"auto\" style:use-optimal-row-height=\"false\"/>\n</style:style>\n",
             "name": "ro1"
+        },
+        {
+            "definition": "<style:style style:family=\"table-row\">\n  <style:table-row-properties style:row-height=\"0.452cm\" fo:break-before=\"auto\" style:use-optimal-row-height=\"true\"/>\n</style:style>\n",
+            "name": "ro2"
         },
         {
             "definition": "<style:style style:family=\"table\" style:master-page-name=\"Default\">\n  <style:table-properties table:display=\"true\" style:writing-mode=\"lr-tb\"/>\n</style:style>\n",
             "name": "ta1"
         },
         {
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n<style:table-cell-properties fo:background-color=\"#fff9ae\"/>\n<style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n</style:style>\n",
-            "name": "bg_yellow"
+            "definition": "<number:date-style number:automatic-order=\"true\">\n  <number:day number:style=\"long\"/>\n  <number:text>/</number:text>\n  <number:month number:style=\"long\"/>\n  <number:text>/</number:text>\n  <number:year/>\n</number:date-style>\n",
+            "name": "N37"
         },
         {
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n<style:table-cell-properties fo:background-color=\"#fff9ae\" fo:border=\"0.06pt solid #000000\"/>\n<style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n</style:style>\n",
-            "name": "bg_yellow_grid06"
+            "definition": "<number:time-style>\n  <number:hours number:style=\"long\"/>\n  <number:text>:</number:text>\n  <number:minutes number:style=\"long\"/>\n  <number:text>:</number:text>\n  <number:seconds number:style=\"long\"/>\n</number:time-style>\n",
+            "name": "N61"
         },
         {
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n<style:table-cell-properties fo:background-color=\"#aaaaff\"/>\n<style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n</style:style>\n",
-            "name": "blue_named"
+            "definition": "<number:boolean-style>\n  <number:boolean/>\n</number:boolean-style>\n",
+            "name": "N99"
         },
         {
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n<style:table-cell-properties fo:background-color=\"#aaaaff\" fo:border=\"0.06pt solid #000000\"/>\n<style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n</style:style>\n",
-            "name": "blue_named_grid"
-        },
-        {
-            "definition": "<style:style style:family=\"table-row\">\n            <style:table-row-properties style:row-height=\"1cm\" fo:break-before=\"auto\"/>\n            </style:style>\n",
-            "name": "table_row_1cm"
-        },
-        {
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n            <style:text-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\"/>\n            <style:table-cell-properties style:text-align-source=\"value-type\"/>\n            <style:paragraph-properties fo:margin-right=\"1mm\"/>\n            </style:style>\n",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n  <style:table-cell-properties style:text-align-source=\"value-type\" style:repeat-content=\"false\" fo:padding-bottom=\"0.035cm\" fo:padding-left=\"0.035cm\" fo:padding-right=\"0.101cm\" fo:padding-top=\"0.035cm\"/>\n  <style:text-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\"/>\n</style:style>\n",
             "name": "bold"
         },
         {
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n            <style:table-cell-properties style:text-align-source=\"fix\"/>\n            <style:paragraph-properties fo:text-align=\"start\" fo:margin-left=\"1mm\"/>\n            </style:style>\n",
-            "name": "left"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n  <style:table-cell-properties style:text-align-source=\"fix\" style:repeat-content=\"false\"/>\n  <style:paragraph-properties fo:text-align=\"start\" fo:margin-left=\"0.101cm\"/>\n</style:style>\n",
+            "name": "ce2"
         },
         {
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n            <style:table-cell-properties style:text-align-source=\"fix\"/>\n            <style:paragraph-properties fo:text-align=\"end\" fo:margin-right=\"1mm\"/>\n            </style:style>\n",
-            "name": "right"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n  <style:table-cell-properties style:text-align-source=\"fix\" style:repeat-content=\"false\" fo:padding-bottom=\"0.035cm\" fo:padding-left=\"0.035cm\" fo:padding-right=\"0.101cm\" fo:padding-top=\"0.035cm\"/>\n  <style:paragraph-properties fo:text-align=\"end\"/>\n</style:style>\n",
+            "name": "ce3"
         },
         {
-            "definition": "<style:style style:family=\"table-column\">\n                    <style:table-column-properties fo:break-before=\"auto\" style:column-width=\"1cm\"/>\n                    </style:style>\n",
-            "name": "lpod_auto_1"
-        },
-        {
-            "definition": "<style:style style:family=\"table-column\">\n                    <style:table-column-properties fo:break-before=\"auto\" style:column-width=\"2cm\"/>\n                    </style:style>\n",
-            "name": "lpod_auto_2"
-        },
-        {
-            "definition": "<style:style style:family=\"table-column\">\n                    <style:table-column-properties fo:break-before=\"auto\" style:column-width=\"3cm\"/>\n                    </style:style>\n",
-            "name": "lpod_auto_3"
-        },
-        {
-            "definition": "<style:style style:family=\"table-column\">\n                    <style:table-column-properties fo:break-before=\"auto\" style:column-width=\"4cm\"/>\n                    </style:style>\n",
-            "name": "lpod_auto_4"
-        },
-        {
-            "definition": "<style:style style:family=\"table-column\">\n                    <style:table-column-properties fo:break-before=\"auto\" style:column-width=\"2cm\"/>\n                    </style:style>\n",
-            "name": "lpod_auto_5"
-        },
-        {
-            "definition": "<style:style style:family=\"table-row\">\n            <style:table-row-properties style:row-height=\"4.52mm\" fo:break-before=\"auto\" style:use-optimal-row-height=\"true\"/>\n            </style:style>\n",
-            "name": "default_table_row"
-        },
-        {
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n             <style:table-cell-properties fo:background-color=\"#dddddd\" fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/>\n             <style:paragraph-properties fo:text-align=\"start\" fo:margin-left=\"1.2mm\"/>\n             <style:text-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\"/>\n             </style:style>\n",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n  <style:table-cell-properties fo:background-color=\"#dddddd\" style:text-align-source=\"fix\" style:repeat-content=\"false\" fo:border=\"0.06pt solid #000000\"/>\n  <style:paragraph-properties fo:text-align=\"start\" fo:margin-left=\"0.12cm\"/>\n  <style:text-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\"/>\n</style:style>\n",
             "name": "bold_left_bg_gray_grid_06pt"
         },
         {
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"decimal2\">\n             <style:table-cell-properties fo:border=\"0.06pt solid #000000\"/>\n             <style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n             </style:style>\n",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"N2\">\n  <style:table-cell-properties fo:border=\"0.06pt solid #000000\" fo:padding-bottom=\"0.035cm\" fo:padding-left=\"0.035cm\" fo:padding-right=\"0.12cm\" fo:padding-top=\"0.035cm\"/>\n  <style:paragraph-properties fo:margin-left=\"0.12cm\"/>\n</style:style>\n",
             "name": "decimal2_grid_06pt"
         },
         {
-            "definition": "<number:number-style><number:number number:decimal-places=\"2\" loext:min-decimal-places=\"2\" number:min-integer-digits=\"1\" number:grouping=\"false\"/>\n            </number:number-style>\n",
-            "name": "decimal2"
-        },
-        {
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"decimal3\">\n             <style:table-cell-properties fo:border=\"0.06pt solid #000000\"/>\n             <style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n             </style:style>\n",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"N117\">\n  <style:table-cell-properties fo:border=\"0.06pt solid #000000\" fo:padding-bottom=\"0.035cm\" fo:padding-left=\"0.035cm\" fo:padding-right=\"0.12cm\" fo:padding-top=\"0.035cm\"/>\n  <style:paragraph-properties fo:margin-left=\"0.12cm\"/>\n</style:style>\n",
             "name": "decimal3_grid_06pt"
         },
         {
-            "definition": "<number:number-style><number:number number:decimal-places=\"3\" loext:min-decimal-places=\"3\" number:min-integer-digits=\"1\" number:grouping=\"false\"/>\n            </number:number-style>\n",
-            "name": "decimal3"
-        },
-        {
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"integer_no_zero\">\n             <style:table-cell-properties fo:border=\"0.06pt solid #000000\"/>\n             <style:paragraph-properties fo:text-align=\"center\"/>\n             </style:style>\n",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"N116\">\n  <style:table-cell-properties style:text-align-source=\"fix\" style:repeat-content=\"false\" fo:border=\"0.06pt solid #000000\"/>\n  <style:paragraph-properties fo:text-align=\"center\"/>\n</style:style>\n",
             "name": "center_integer_no_zero_grid_06pt"
         },
         {
-            "definition": "<number:number-style><number:number number:decimal-places=\"0\" loext:min-decimal-places=\"0\" number:min-integer-digits=\"0\" number:grouping=\"false\"/>\n            </number:number-style>\n",
-            "name": "integer_no_zero"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n  <style:table-cell-properties fo:background-color=\"#fff9ae\" fo:border=\"0.06pt solid #000000\" fo:padding-bottom=\"0.035cm\" fo:padding-left=\"0.035cm\" fo:padding-right=\"0.12cm\" fo:padding-top=\"0.035cm\"/>\n  <style:paragraph-properties fo:margin-left=\"0.12cm\"/>\n</style:style>\n",
+            "name": "bg_yellow_grid06"
         },
         {
-            "definition": "<style:style style:family=\"table-column\">\n                    <style:table-column-properties fo:break-before=\"auto\" style:column-width=\"2.5cm\"/>\n                    </style:style>\n",
-            "name": "lpod_auto_6"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n  <style:table-cell-properties fo:background-color=\"#aaaaff\" fo:border=\"0.06pt solid #000000\" fo:padding-bottom=\"0.035cm\" fo:padding-left=\"0.035cm\" fo:padding-right=\"0.12cm\" fo:padding-top=\"0.035cm\"/>\n  <style:paragraph-properties fo:margin-left=\"0.12cm\"/>\n</style:style>\n",
+            "name": "blue_named_grid"
         },
         {
-            "definition": "<style:page-layout>\n  <style:page-layout-properties style:writing-mode=\"lr-tb\"/>\n  <style:header-style>\n    <style:header-footer-properties fo:min-height=\"7.51mm\" fo:margin-left=\"0mm\" fo:margin-right=\"0mm\" fo:margin-bottom=\"2.5mm\"/>\n  </style:header-style>\n  <style:footer-style>\n    <style:header-footer-properties fo:min-height=\"7.51mm\" fo:margin-left=\"0mm\" fo:margin-right=\"0mm\" fo:margin-top=\"2.5mm\"/>\n  </style:footer-style>\n</style:page-layout>\n",
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"N37\"/>\n",
+            "name": "ce10"
+        },
+        {
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"N61\"/>\n",
+            "name": "ce11"
+        },
+        {
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"N99\"/>\n",
+            "name": "ce12"
+        },
+        {
+            "definition": "<number:number-style>\n  <number:number number:decimal-places=\"2\" number:min-decimal-places=\"2\" number:min-integer-digits=\"1\"/>\n</number:number-style>\n",
+            "name": "N2"
+        },
+        {
+            "definition": "<style:page-layout>\n  <style:page-layout-properties style:writing-mode=\"lr-tb\"/>\n  <style:header-style>\n    <style:header-footer-properties fo:min-height=\"0.751cm\" fo:margin-left=\"0cm\" fo:margin-right=\"0cm\" fo:margin-bottom=\"0.25cm\"/>\n  </style:header-style>\n  <style:footer-style>\n    <style:header-footer-properties fo:min-height=\"0.751cm\" fo:margin-left=\"0cm\" fo:margin-right=\"0cm\" fo:margin-top=\"0.25cm\"/>\n  </style:footer-style>\n</style:page-layout>\n",
             "name": "Mpm1"
         },
         {
-            "definition": "<style:page-layout>\n  <style:page-layout-properties style:writing-mode=\"lr-tb\"/>\n  <style:header-style>\n    <style:header-footer-properties fo:min-height=\"7.51mm\" fo:margin-left=\"0mm\" fo:margin-right=\"0mm\" fo:margin-bottom=\"2.5mm\" fo:border=\"2.49pt solid #000000\" fo:padding=\"0.18mm\" fo:background-color=\"#c0c0c0\">\n      <style:background-image/>\n    </style:header-footer-properties>\n  </style:header-style>\n  <style:footer-style>\n    <style:header-footer-properties fo:min-height=\"7.51mm\" fo:margin-left=\"0mm\" fo:margin-right=\"0mm\" fo:margin-top=\"2.5mm\" fo:border=\"2.49pt solid #000000\" fo:padding=\"0.18mm\" fo:background-color=\"#c0c0c0\">\n      <style:background-image/>\n    </style:header-footer-properties>\n  </style:footer-style>\n</style:page-layout>\n",
+            "definition": "<style:page-layout>\n  <style:page-layout-properties style:writing-mode=\"lr-tb\"/>\n  <style:header-style>\n    <style:header-footer-properties fo:min-height=\"0.751cm\" fo:margin-left=\"0cm\" fo:margin-right=\"0cm\" fo:margin-bottom=\"0.25cm\" fo:border=\"2.49pt solid #000000\" fo:padding=\"0.018cm\" fo:background-color=\"#c0c0c0\">\n      <style:background-image/>\n    </style:header-footer-properties>\n  </style:header-style>\n  <style:footer-style>\n    <style:header-footer-properties fo:min-height=\"0.751cm\" fo:margin-left=\"0cm\" fo:margin-right=\"0cm\" fo:margin-top=\"0.25cm\" fo:border=\"2.49pt solid #000000\" fo:padding=\"0.018cm\" fo:background-color=\"#c0c0c0\">\n      <style:background-image/>\n    </style:header-footer-properties>\n  </style:footer-style>\n</style:page-layout>\n",
             "name": "Mpm2"
         }
     ]
