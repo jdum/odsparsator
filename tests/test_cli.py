@@ -8,6 +8,7 @@ from odsparsator.cli import check_odfdo_version
 RE_VERS = re.compile(r' *version *= *"(\S+)"$')
 DATA = Path(__file__).parent / "data"
 FILE_MINIMAL = DATA / "minimal.ods"
+FILE_MINIMAL_HIDDEN = DATA / "minimal_hidden.ods"
 
 
 def read_proj_version():
@@ -99,3 +100,42 @@ def test_generate_keep_color(tmp_path):
     content = json.loads(dest.read_text(encoding="utf8"))
     assert "body" in content
     assert len(content["body"]) == 2
+
+def test_generate_min_hidden_on(tmp_path):
+    dest = tmp_path / "minimal.json"
+    dest.unlink(missing_ok=True)
+    command = ["odsparsator", "-m", "-s", str(FILE_MINIMAL), str(dest)]
+    out, err, exitcode = capture(command)
+    assert exitcode == 0
+    assert err == b""
+    assert out == b""
+    assert dest.is_file()
+    content = json.loads(dest.read_text(encoding="utf8"))
+    assert "body" in content
+    assert len(content["body"]) == 2
+
+def test_generate_min_hidden_hidden_on(tmp_path):
+    dest = tmp_path / "minimal.json"
+    dest.unlink(missing_ok=True)
+    command = ["odsparsator", "-m", "-s", str(FILE_MINIMAL_HIDDEN), str(dest)]
+    out, err, exitcode = capture(command)
+    assert exitcode == 0
+    assert err == b""
+    assert out == b""
+    assert dest.is_file()
+    content = json.loads(dest.read_text(encoding="utf8"))
+    assert "body" in content
+    assert len(content["body"]) == 2
+
+def test_generate_min_hidden_hidden_off(tmp_path):
+    dest = tmp_path / "minimal.json"
+    dest.unlink(missing_ok=True)
+    command = ["odsparsator", "-m", str(FILE_MINIMAL_HIDDEN), str(dest)]
+    out, err, exitcode = capture(command)
+    assert exitcode == 0
+    assert err == b""
+    assert out == b""
+    assert dest.is_file()
+    content = json.loads(dest.read_text(encoding="utf8"))
+    assert "body" in content
+    assert len(content["body"]) == 1

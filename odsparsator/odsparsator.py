@@ -23,7 +23,7 @@ from odfdo.cell import Cell
 from odfdo.document import Table
 from odfdo.row import Row
 
-__version__ = "1.11.0"
+__version__ = "1.12.0"
 
 
 BODY = "body"
@@ -54,6 +54,7 @@ class ODSParsator:
         all_styles: bool = False,
         colors: bool = False,
         keep_styled: bool = False,
+        see_hidden: bool = False,
     ) -> None:
         """Class in charge of parsing the .ods document..
 
@@ -72,6 +73,7 @@ class ODSParsator:
         self.all_styles: bool = all_styles
         self.colors: bool = colors
         self.keep_styled: bool = keep_styled
+        self.see_hidden: bool = see_hidden
         self._current_table: Table | None = None
         self._doc_style_cache: dict[tuple[str, str], dict[str, Any]] = {}
         self._current_table_column_cache: dict[int, str] = {}
@@ -184,10 +186,26 @@ class ODSParsator:
             else:
                 self.collect_used_styles()
 
+    def is_hidden_table(self, table: Table) -> bool:
+        if self.see_hidden:
+            return False  # parse also hidden sheets
+        style_name = table.style
+        if not style_name:
+            return False
+        style = self.doc.get_style("table", style_name)
+        if not style:
+            return False
+        display = style.get_properties().get("table:display")
+        if display:
+            return display.lower().strip() == "false"
+        return False
+
     def collect_tables(self) -> None:
         """Retrieve all tables of the input document."""
         self.body = []
         for table in self.doc.body.get_tables():
+            if self.is_hidden_table(table):
+                continue
             self.initialize_table(table)
             self.parse_table(table)
 
@@ -413,6 +431,7 @@ def ods_to_json(
     all_styles: bool = False,
     colors: bool = False,
     keep_styled: bool = False,
+    see_hidden: bool = False,
 ) -> None:
     """Parse the input file and save the result in a json file.
 
@@ -425,6 +444,7 @@ def ods_to_json(
         all_styles (bool): Collect all styles from the input.
         colors (bool): Collect background color of cells.
         keep_styled (bool): Keep styled cells with empty value.
+        see_hidden (bool): parse also the hidden sheets.
     """
     parser = ODSParsator(
         export_minimal=export_minimal,
@@ -432,6 +452,7 @@ def ods_to_json(
         all_styles=all_styles,
         colors=colors,
         keep_styled=keep_styled,
+        see_hidden=see_hidden,
     )
     parser.parse_document(input_path)
     Path(output_path).write_text(parser.json_content, encoding="utf8")
@@ -444,6 +465,7 @@ def ods_to_python(
     all_styles: bool = False,
     colors: bool = False,
     keep_styled: bool = False,
+    see_hidden: bool = False,
 ) -> dict[str, Any] | list[Any]:
     """Parse the input file and return the content as python structure.
 
@@ -456,6 +478,7 @@ def ods_to_python(
         all_styles (bool): Collect all styles from the input.
         colors (bool): Collect background color of cells.
         keep_styled (bool): Keep styled cells with empty value.
+        see_hidden (bool): parse also the hidden sheets.
 
     Returns:
         dict or list: content as python structure
@@ -466,6 +489,7 @@ def ods_to_python(
         all_styles=all_styles,
         colors=colors,
         keep_styled=keep_styled,
+        see_hidden=see_hidden,
     )
     parser.parse_document(input_path)
     return parser.content

@@ -61,6 +61,7 @@ options:
   -a, --all-styles   collect all styles from the input
   -c, --color        collect background color of cells
   -k, --keep-styled  keep styled cells with empty value
+  -s, --see-hidden   parse also the hidden sheets
 
 ```
 

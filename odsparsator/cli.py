@@ -75,6 +75,12 @@ def main() -> None:  # pragma: no cover
         help="keep styled cells with empty value",
         action="store_true",
     )
+    parser.add_argument(
+        "-s",
+        "--see-hidden",
+        help="parse also the hidden sheets",
+        action="store_true",
+    )
     args = parser.parse_args()
     ods_to_json(
         args.input_file,
@@ -83,6 +89,7 @@ def main() -> None:  # pragma: no cover
         args.all_styles,
         args.color,
         args.keep_styled,
+        args.see_hidden,
     )
 
 
