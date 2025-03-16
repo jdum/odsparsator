@@ -1,4 +1,4 @@
-# Copyright 2021-2024 Jérôme Dumonteil
+# Copyright 2021-2025 Jérôme Dumonteil
 # Licence: MIT
 # Authors: jerome.dumonteil@gmail.com
 """Generate a json file from an OpenDocument Format .ods file.
@@ -11,6 +11,7 @@ structure.
 
 The resulting data follow the format of the reverse odsgenerator.py script.
 """
+
 from __future__ import annotations
 
 import json
@@ -23,7 +24,7 @@ from odfdo.cell import Cell
 from odfdo.document import Table
 from odfdo.row import Row
 
-__version__ = "1.12.1"
+__version__ = "1.12.2"
 
 
 BODY = "body"

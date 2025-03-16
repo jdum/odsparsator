@@ -18,7 +18,7 @@ from odsparsator import odsparsator
 # -- Project information -----------------------------------------------------
 
 project = "odsparsator"
-copyright = "2021-2024, Jérôme Dumonteil"  # noqa: A001
+copyright = "2021-2025, Jérôme Dumonteil"  # noqa: A001
 author = "Jérôme Dumonteil"
 
 # The short X.Y version

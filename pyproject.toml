@@ -1,7 +1,10 @@
-[tool.poetry]
+[project]
 name = "odsparsator"
-version = "1.12.1"
+version = "1.12.2"
 description = "Generate a json file from an OpenDocument Format .ods file"
+authors = [{ name = "Jérôme Dumonteil", email = "jerome.dumonteil@gmail.com" }]
+requires-python = ">=3.9,<4"
+readme = "README.md"
 license = "MIT"
 keywords = ["openDocument", "ODF", "ods", "json", "spreadsheet", "parser"]
 classifiers = [
@@ -21,44 +24,38 @@ classifiers = [
     "Topic :: Text Processing",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
-homepage = "https://github.com/jdum/odsparsator"
-repository = "https://github.com/jdum/odsparsator"
-authors = ["Jérôme Dumonteil <jerome.dumonteil@gmail.com>"]
-readme = "README.md"
-packages = [{ include = "odsparsator" }]
+dependencies = ["odfdo>=3.7.7"]
 
-[tool.poetry.scripts]
+[project.urls]
+Homepage = "https://github.com/jdum/odsparsator"
+Repository = "https://github.com/jdum/odsparsator"
+
+[project.scripts]
 odsparsator = "odsparsator.cli:main"
 
-[tool.poetry.dependencies]
-python = ">=3.9,<4"
-odfdo = ">=3.7.7"
+[dependency-groups]
+doc = ["sphinx>=7.0", "myst-parser>=2.0.0"]
+dev = ["pytest>=8.0", "tox>=4", "ruff>=0.11.0", "isort>=6.0", "coverage>=7.0"]
 
-[tool.poetry.group.docs.dependencies]
-sphinx = ">=7.0"
-myst-parser = ">=2.0.0"
-
-[tool.poetry.group.dev.dependencies]
-poetry = "~1.8"
-pytest = ">=8.0"
-tox = ">=4"
-ruff = ">=0.5.0"
-isort = ">=5.13.0"
-coverage = ">=7.0"
+[tool.uv]
+default-groups = ["doc", "dev"]
 
 [build-system]
-requires = ["poetry-core>=1.8.0"]
-build-backend = "poetry.core.masonry.api"
-
-[tool.black]
-line-length = 88
-target-version = ['py312']
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [tool.isort]
 profile = "black"
 
 [tool.ruff]
-lint.select = [
+exclude = [".venv"]
+# Same as Black.
+line-length = 88
+indent-width = 4
+target-version = "py313"
+
+[tool.ruff.lint]
+select = [
     # flake8-2020
     "YTT",
     # flake8-bandit
@@ -91,7 +88,7 @@ lint.select = [
     # tryceratops
     "TRY",
 ]
-lint.ignore = [
+ignore = [
     # LineTooLong
     "E501",
     # DoNotAssignLambda

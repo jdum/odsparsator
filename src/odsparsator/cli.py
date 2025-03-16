@@ -1,8 +1,8 @@
-# Copyright 2021-2024 Jérôme Dumonteil
+# Copyright 2021-2025 Jérôme Dumonteil
 # Licence: MIT
 # Authors: jerome.dumonteil@gmail.com
-"""CLI interface to odsparsator.
-"""
+"""CLI interface to odsparsator."""
+
 from __future__ import annotations
 
 import argparse
@@ -10,9 +10,10 @@ import sys
 
 import odfdo
 
-from odsparsator.odsparsator import __doc__, __version__, ods_to_json
+from odsparsator.odsparsator import __doc__ as op_doc
+from odsparsator.odsparsator import __version__, ods_to_json
 
-ODFDO_REQUIREMENT = (3, 7, 5)
+ODFDO_REQUIREMENT = (3, 7, 7)
 
 
 def check_odfdo_version() -> bool:
@@ -42,7 +43,7 @@ def main() -> None:  # pragma: no cover
     parser = argparse.ArgumentParser(
         description="Generate a json file from an OpenDocument Format .ods file.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog=__doc__,
+        epilog=op_doc,
     )
     parser.add_argument(
         "--version", action="version", version="%(prog)s " + __version__
