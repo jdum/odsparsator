@@ -29,13 +29,13 @@ License:
 Installation from Pypi (recommended):
 
 
-```python
+```
 pip install odsparsator
 ```
 
-Installation from sources (requiring setuptools):
+Installation from sources:
 
-```python
+```
 pip install .
 ```
 
