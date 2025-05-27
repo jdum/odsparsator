@@ -702,7 +702,7 @@ wheels = [
 
 [[package]]
 name = "odsparsator"
-version = "1.12.3"
+version = "1.13.0"
 source = { editable = "." }
 dependencies = [
     { name = "odfdo" },
@@ -725,7 +725,7 @@ doc = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "odfdo", specifier = ">=3.7.7" }]
+requires-dist = [{ name = "odfdo", specifier = ">=3.14.0" }]
 
 [package.metadata.requires-dev]
 dev = [
