@@ -24,7 +24,7 @@ from odfdo.cell import Cell
 from odfdo.document import Table
 from odfdo.row import Row
 
-__version__ = "1.12.2"
+__version__ = "1.13.0"
 
 
 BODY = "body"
@@ -42,9 +42,6 @@ SPAN = "span"
 STYLE = "style"
 STYLES = "styles"
 DEFAULT_BGCOLOR = "#ffffff"
-
-NBCOLSPAN = "table:number-columns-spanned"
-NBROWSPAN = "table:number-rows-spanned"
 
 
 class ODSParsator:
@@ -78,6 +75,8 @@ class ODSParsator:
         self._current_table: Table | None = None
         self._doc_style_cache: dict[tuple[str, str], dict[str, Any]] = {}
         self._current_table_column_cache: dict[int, str] = {}
+        self._styles_elements: dict[str, Element] = {}
+        self._used_styles: set[str] = set()
 
     def collect_col_widths(self) -> None:
         """Collect all columns widths from styles."""
@@ -108,49 +107,49 @@ class ODSParsator:
                     }
                 )
 
-    def collect_used_styles(self) -> None:  # noqa: C901
+    def store_style_name(self, name: str | None) -> None:
+        if not name:
+            return
+        if name not in self._used_styles and name in self._styles_elements:
+            style = self._styles_elements[name]
+            self._used_styles.add(name)
+            # add style dependacies
+            for key, value in style.attributes.items():
+                if key.endswith("style-name"):
+                    self.store_style_name(value)
+
+    def keep_style(self, item: Any) -> None:
+        if isinstance(item, dict):
+            self.store_style_name(item.get(STYLE))
+
+    def collect_used_styles(self) -> None:
         """Store used automatic styles of the document.
 
         Styles are a list of dict: Name and definition of styles.
         """
 
-        styles_elements = {}
-        used_styles = set()
-
-        def store_style_name(name: str | None) -> None:
-            if not name:
-                return
-            if name not in used_styles and name in styles_elements:
-                style = styles_elements[name]
-                used_styles.add(name)
-                # add style dependacies
-                for key, value in style.attributes.items():
-                    if key.endswith("style-name"):
-                        store_style_name(value)
-
-        def keep_style(item: Any) -> None:
-            if isinstance(item, dict):
-                store_style_name(item.get(STYLE))
+        self._styles_elements = {}
+        self._used_styles = set()
 
         self.collect_all_styles()
         for style in self.styles:
             name = style.get(NAME)
             definition = style.get(DEFINITION)
             style = Element.from_tag(definition)
-            styles_elements[name] = style
+            self._styles_elements[name] = style
         for table in self.body:
-            keep_style(table)
+            self.keep_style(table)
             for row in table[TABLE]:
                 if isinstance(row, dict):
-                    keep_style(row)
+                    self.keep_style(row)
                     cells = row[ROW]
                 else:
                     cells = row
                 for cell in cells:
-                    keep_style(cell)
+                    self.keep_style(cell)
         self.styles = []
-        for name in used_styles:
-            style = styles_elements[name]
+        for name in self._used_styles:
+            style = self._styles_elements[name]
             if style.name:
                 style.set_attribute("style:name", None)
             self.styles.append(
@@ -394,16 +393,7 @@ class ODSParsator:
         Returns:
             dict or None: Spanned parameters.
         """
-        if (
-            cell.get_attribute(NBCOLSPAN) is None
-            and cell.get_attribute(NBROWSPAN) is None
-        ):
-            return None
-        try:
-            cols = int(cell.get_attribute(NBCOLSPAN))
-            rows = int(cell.get_attribute(NBROWSPAN))
-        except (TypeError, ValueError):
-            return None
+        cols, rows = cell.span_area()
         if cols > 1 or rows > 1:
             return {COLSPAN: cols, ROWSPAN: rows}
         return None

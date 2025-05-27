@@ -1,6 +1,6 @@
 [project]
 name = "odsparsator"
-version = "1.12.2"
+version = "1.13.0"
 description = "Generate a json file from an OpenDocument Format .ods file"
 authors = [{ name = "Jérôme Dumonteil", email = "jerome.dumonteil@gmail.com" }]
 requires-python = ">=3.9,<4"
@@ -24,7 +24,7 @@ classifiers = [
     "Topic :: Text Processing",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
-dependencies = ["odfdo>=3.7.7"]
+dependencies = ["odfdo>=3.14.0"]
 
 [project.urls]
 Homepage = "https://github.com/jdum/odsparsator"
