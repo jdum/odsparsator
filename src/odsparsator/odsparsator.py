@@ -24,7 +24,7 @@ from odfdo.cell import Cell
 from odfdo.document import Table
 from odfdo.row import Row
 
-__version__ = "1.13.0"
+__version__ = "1.13.1"
 
 
 BODY = "body"
@@ -62,7 +62,7 @@ class ODSParsator:
         Args:
             Boolean options
         """
-        self.doc: Document | None = None
+        self.doc: Document = Document("ods")
         self.body: Element = []
         self.styles: list = []
         self.col_widths: dict = {}
@@ -72,7 +72,7 @@ class ODSParsator:
         self.colors: bool = colors
         self.keep_styled: bool = keep_styled
         self.see_hidden: bool = see_hidden
-        self._current_table: Table | None = None
+        self._current_table: Table = Table("none")
         self._doc_style_cache: dict[tuple[str, str], dict[str, Any]] = {}
         self._current_table_column_cache: dict[int, str] = {}
         self._styles_elements: dict[str, Element] = {}
@@ -195,7 +195,7 @@ class ODSParsator:
         style = self.doc.get_style("table", style_name)
         if not style:
             return False
-        display = style.get_properties().get("table:display")
+        display = str(style.get_properties().get("table:display"))
         if display:
             return display.lower().strip() == "false"
         return False
@@ -280,10 +280,8 @@ class ODSParsator:
             value = cell.get_attribute("office:string-value")
             if value is not None:
                 return value
-            value = []
-            for para in cell.get_elements("text:p"):
-                value.append(para.text_recursive)
-            return "\n".join(value)
+            value_list = [para.text_recursive for para in cell.get_elements("text:p")]
+            return "\n".join(value_list)
         return None
 
     def parse_row(self, row: Row) -> list | dict:
@@ -345,7 +343,7 @@ class ODSParsator:
         Returns:
             dict: Python content of the cell.
         """
-        record = self.parse_cell(cell)
+        record: dict[str, Any] = self.parse_cell(cell)
         record[BGCOLOR] = self.cell_bgcolor(row, cell)
         return record
 
@@ -376,11 +374,11 @@ class ODSParsator:
     def cell_bgcolor(self, row: Row, cell: Cell) -> str:
         if cell.style:
             props = self._style_cell_properties(("table-cell", cell.style))
-            return props.get("fo:background-color", DEFAULT_BGCOLOR)
+            return str(props.get("fo:background-color", DEFAULT_BGCOLOR))
         if row.style:
             props = self._style_cell_properties(("table-row", row.style))
             if props:
-                return props.get("fo:background-color", DEFAULT_BGCOLOR)
+                return str(props.get("fo:background-color", DEFAULT_BGCOLOR))
         return self._column_bgcolor(cell.x)
 
     @staticmethod
