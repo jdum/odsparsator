@@ -12,7 +12,7 @@ The resulting data follows the format of the reverse `odsgenerator.py` script,
 see https://github.com/jdum/odsgenerator
 
 
-`odsparsator` is a `Python` package, using the [odfdo](https://github.com/jdum/odfdo) library. Current version requires Python >= 3.9, see prior versions for older environments.
+`odsparsator` is a `Python` package, using the [odfdo](https://github.com/jdum/odfdo) library. Current version requires Python >= 3.10, see prior versions for older environments.
 
 Project:
     https://github.com/jdum/odsparsator

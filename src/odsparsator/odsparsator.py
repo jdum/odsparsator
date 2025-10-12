@@ -24,7 +24,7 @@ from odfdo.cell import Cell
 from odfdo.document import Table
 from odfdo.row import Row
 
-__version__ = "1.13.1"
+__version__ = "1.14.0"
 
 
 BODY = "body"

@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-import odsparsator.odsparsator as parser
+from odsparsator import odsparsator as parser
 
 DATA = Path(__file__).parent / "data"
 FILE_USE_CASE = DATA / "use_case.ods"

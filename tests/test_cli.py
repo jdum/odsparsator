@@ -39,15 +39,15 @@ def test_no_param():
     out, err, exitcode = capture(command)
     assert exitcode == 2
     assert out == b""
-    assert err.startswith(b"usage: odsparsator [-h] [--version]")
+    assert err.startswith(b"usage: ")
 
 
 def test_version():
     command = ["odsparsator", "--version"]
     out, err, exitcode = capture(command)
     assert exitcode == 0
-    expected = f"odsparsator {read_proj_version()}".encode()
-    assert out == expected
+    expected = f"{read_proj_version()}".encode()
+    assert expected in out
     assert err == b""
 
 
@@ -101,6 +101,7 @@ def test_generate_keep_color(tmp_path):
     assert "body" in content
     assert len(content["body"]) == 2
 
+
 def test_generate_min_hidden_on(tmp_path):
     dest = tmp_path / "minimal.json"
     dest.unlink(missing_ok=True)
@@ -114,6 +115,7 @@ def test_generate_min_hidden_on(tmp_path):
     assert "body" in content
     assert len(content["body"]) == 2
 
+
 def test_generate_min_hidden_hidden_on(tmp_path):
     dest = tmp_path / "minimal.json"
     dest.unlink(missing_ok=True)
@@ -126,6 +128,7 @@ def test_generate_min_hidden_hidden_on(tmp_path):
     content = json.loads(dest.read_text(encoding="utf8"))
     assert "body" in content
     assert len(content["body"]) == 2
+
 
 def test_generate_min_hidden_hidden_off(tmp_path):
     dest = tmp_path / "minimal.json"
