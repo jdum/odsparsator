@@ -6,8 +6,8 @@
                 {
                     "row": [
                         {
-                            "value": "row style: default_table_row (row style)",
-                            "style": "left"
+                            "style": "left",
+                            "value": "row style: default_table_row (row style)"
                         }
                     ],
                     "style": "default_table_row"
@@ -15,8 +15,8 @@
                 {
                     "row": [
                         {
-                            "value": "table_row_1cm (row style) ",
-                            "style": "left"
+                            "style": "left",
+                            "value": "table_row_1cm (row style) "
                         }
                     ],
                     "style": "table_row_1cm"
@@ -28,8 +28,8 @@
                 {
                     "row": [
                         {
-                            "value": "provided cell style:",
-                            "style": "bold"
+                            "style": "bold",
+                            "value": "provided cell style:"
                         }
                     ],
                     "style": "default_table_row"
@@ -37,24 +37,24 @@
                 {
                     "row": [
                         {
-                            "value": "no style applied",
-                            "style": "left"
+                            "style": "left",
+                            "value": "no style applied"
                         },
                         {
-                            "value": "some text",
-                            "style": "left"
+                            "style": "left",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "right"
+                            "style": "right",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "right"
+                            "style": "right",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "right"
+                            "style": "right",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -62,24 +62,24 @@
                 {
                     "row": [
                         {
-                            "value": "bold",
-                            "style": "left"
+                            "style": "left",
+                            "value": "bold"
                         },
                         {
-                            "value": "some text",
-                            "style": "bold"
+                            "style": "bold",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "bold"
+                            "style": "bold",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "bold"
+                            "style": "bold",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "bold"
+                            "style": "bold",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -87,24 +87,24 @@
                 {
                     "row": [
                         {
-                            "value": "bold_center",
-                            "style": "left"
+                            "style": "left",
+                            "value": "bold_center"
                         },
                         {
-                            "value": "some text",
-                            "style": "bold_center"
+                            "style": "bold_center",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "bold_center"
+                            "style": "bold_center",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "bold_center"
+                            "style": "bold_center",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "bold_center"
+                            "style": "bold_center",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -112,24 +112,24 @@
                 {
                     "row": [
                         {
-                            "value": "left",
-                            "style": "left"
+                            "style": "left",
+                            "value": "left"
                         },
                         {
-                            "value": "some text",
-                            "style": "left"
+                            "style": "left",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "left"
+                            "style": "left",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "left"
+                            "style": "left",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "left"
+                            "style": "left",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -137,24 +137,24 @@
                 {
                     "row": [
                         {
-                            "value": "right",
-                            "style": "left"
+                            "style": "left",
+                            "value": "right"
                         },
                         {
-                            "value": "some text",
-                            "style": "right"
+                            "style": "right",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "right"
+                            "style": "right",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "right"
+                            "style": "right",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "right"
+                            "style": "right",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -162,24 +162,24 @@
                 {
                     "row": [
                         {
-                            "value": "center",
-                            "style": "left"
+                            "style": "left",
+                            "value": "center"
                         },
                         {
-                            "value": "some text",
-                            "style": "center"
+                            "style": "center",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "center"
+                            "style": "center",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "center"
+                            "style": "center",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "center"
+                            "style": "center",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -187,24 +187,24 @@
                 {
                     "row": [
                         {
-                            "value": "cell_decimal1",
-                            "style": "left"
+                            "style": "left",
+                            "value": "cell_decimal1"
                         },
                         {
-                            "value": "some text",
-                            "style": "cell_decimal1"
+                            "style": "cell_decimal1",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "cell_decimal1"
+                            "style": "cell_decimal1",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "cell_decimal1"
+                            "style": "cell_decimal1",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "cell_decimal1"
+                            "style": "cell_decimal1",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -212,24 +212,24 @@
                 {
                     "row": [
                         {
-                            "value": "cell_decimal2",
-                            "style": "left"
+                            "style": "left",
+                            "value": "cell_decimal2"
                         },
                         {
-                            "value": "some text",
-                            "style": "cell_decimal2"
+                            "style": "cell_decimal2",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "cell_decimal2"
+                            "style": "cell_decimal2",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "cell_decimal2"
+                            "style": "cell_decimal2",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "cell_decimal2"
+                            "style": "cell_decimal2",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -237,24 +237,24 @@
                 {
                     "row": [
                         {
-                            "value": "cell_decimal3",
-                            "style": "left"
+                            "style": "left",
+                            "value": "cell_decimal3"
                         },
                         {
-                            "value": "some text",
-                            "style": "cell_decimal3"
+                            "style": "cell_decimal3",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "cell_decimal3"
+                            "style": "cell_decimal3",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "cell_decimal3"
+                            "style": "cell_decimal3",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "cell_decimal3"
+                            "style": "cell_decimal3",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -262,24 +262,24 @@
                 {
                     "row": [
                         {
-                            "value": "cell_decimal4",
-                            "style": "left"
+                            "style": "left",
+                            "value": "cell_decimal4"
                         },
                         {
-                            "value": "some text",
-                            "style": "cell_decimal4"
+                            "style": "cell_decimal4",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "cell_decimal4"
+                            "style": "cell_decimal4",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "cell_decimal4"
+                            "style": "cell_decimal4",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "cell_decimal4"
+                            "style": "cell_decimal4",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -287,24 +287,24 @@
                 {
                     "row": [
                         {
-                            "value": "cell_decimal6",
-                            "style": "left"
+                            "style": "left",
+                            "value": "cell_decimal6"
                         },
                         {
-                            "value": "some text",
-                            "style": "cell_decimal6"
+                            "style": "cell_decimal6",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "cell_decimal6"
+                            "style": "cell_decimal6",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "cell_decimal6"
+                            "style": "cell_decimal6",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "cell_decimal6"
+                            "style": "cell_decimal6",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -312,24 +312,24 @@
                 {
                     "row": [
                         {
-                            "value": "grid_06pt",
-                            "style": "left"
+                            "style": "left",
+                            "value": "grid_06pt"
                         },
                         {
-                            "value": "some text",
-                            "style": "grid_06pt"
+                            "style": "grid_06pt",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "grid_06pt"
+                            "style": "grid_06pt",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "grid_06pt"
+                            "style": "grid_06pt",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "grid_06pt"
+                            "style": "grid_06pt",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -337,24 +337,24 @@
                 {
                     "row": [
                         {
-                            "value": "bold_left_bg_gray_grid_06pt",
-                            "style": "left"
+                            "style": "left",
+                            "value": "bold_left_bg_gray_grid_06pt"
                         },
                         {
-                            "value": "some text",
-                            "style": "bold_left_bg_gray_grid_06pt"
+                            "style": "bold_left_bg_gray_grid_06pt",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "bold_left_bg_gray_grid_06pt"
+                            "style": "bold_left_bg_gray_grid_06pt",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "bold_left_bg_gray_grid_06pt"
+                            "style": "bold_left_bg_gray_grid_06pt",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "bold_left_bg_gray_grid_06pt"
+                            "style": "bold_left_bg_gray_grid_06pt",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -362,24 +362,24 @@
                 {
                     "row": [
                         {
-                            "value": "bold_right_bg_gray_grid_06pt",
-                            "style": "left"
+                            "style": "left",
+                            "value": "bold_right_bg_gray_grid_06pt"
                         },
                         {
-                            "value": "some text",
-                            "style": "bold_right_bg_gray_grid_06pt"
+                            "style": "bold_right_bg_gray_grid_06pt",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "bold_right_bg_gray_grid_06pt"
+                            "style": "bold_right_bg_gray_grid_06pt",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "bold_right_bg_gray_grid_06pt"
+                            "style": "bold_right_bg_gray_grid_06pt",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "bold_right_bg_gray_grid_06pt"
+                            "style": "bold_right_bg_gray_grid_06pt",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -387,24 +387,24 @@
                 {
                     "row": [
                         {
-                            "value": "bold_center_bg_gray_grid_06pt",
-                            "style": "left"
+                            "style": "left",
+                            "value": "bold_center_bg_gray_grid_06pt"
                         },
                         {
-                            "value": "some text",
-                            "style": "bold_center_bg_gray_grid_06pt"
+                            "style": "bold_center_bg_gray_grid_06pt",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "bold_center_bg_gray_grid_06pt"
+                            "style": "bold_center_bg_gray_grid_06pt",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "bold_center_bg_gray_grid_06pt"
+                            "style": "bold_center_bg_gray_grid_06pt",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "bold_center_bg_gray_grid_06pt"
+                            "style": "bold_center_bg_gray_grid_06pt",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -412,24 +412,24 @@
                 {
                     "row": [
                         {
-                            "value": "bold_left_grid_06pt",
-                            "style": "left"
+                            "style": "left",
+                            "value": "bold_left_grid_06pt"
                         },
                         {
-                            "value": "some text",
-                            "style": "bold_left_grid_06pt"
+                            "style": "bold_left_grid_06pt",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "bold_left_grid_06pt"
+                            "style": "bold_left_grid_06pt",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "bold_left_grid_06pt"
+                            "style": "bold_left_grid_06pt",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "bold_left_grid_06pt"
+                            "style": "bold_left_grid_06pt",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -437,24 +437,24 @@
                 {
                     "row": [
                         {
-                            "value": "bold_right_grid_06pt",
-                            "style": "left"
+                            "style": "left",
+                            "value": "bold_right_grid_06pt"
                         },
                         {
-                            "value": "some text",
-                            "style": "bold_right_grid_06pt"
+                            "style": "bold_right_grid_06pt",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "bold_right_grid_06pt"
+                            "style": "bold_right_grid_06pt",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "bold_right_grid_06pt"
+                            "style": "bold_right_grid_06pt",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "bold_right_grid_06pt"
+                            "style": "bold_right_grid_06pt",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -462,24 +462,24 @@
                 {
                     "row": [
                         {
-                            "value": "bold_center_grid_06pt",
-                            "style": "left"
+                            "style": "left",
+                            "value": "bold_center_grid_06pt"
                         },
                         {
-                            "value": "some text",
-                            "style": "bold_center_grid_06pt"
+                            "style": "bold_center_grid_06pt",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "bold_center_grid_06pt"
+                            "style": "bold_center_grid_06pt",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "bold_center_grid_06pt"
+                            "style": "bold_center_grid_06pt",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "bold_center_grid_06pt"
+                            "style": "bold_center_grid_06pt",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -487,24 +487,24 @@
                 {
                     "row": [
                         {
-                            "value": "left_grid_06pt",
-                            "style": "left"
+                            "style": "left",
+                            "value": "left_grid_06pt"
                         },
                         {
-                            "value": "some text",
-                            "style": "left_grid_06pt"
+                            "style": "left_grid_06pt",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "left_grid_06pt"
+                            "style": "left_grid_06pt",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "left_grid_06pt"
+                            "style": "left_grid_06pt",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "left_grid_06pt"
+                            "style": "left_grid_06pt",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -512,24 +512,24 @@
                 {
                     "row": [
                         {
-                            "value": "right_grid_06pt",
-                            "style": "left"
+                            "style": "left",
+                            "value": "right_grid_06pt"
                         },
                         {
-                            "value": "some text",
-                            "style": "right_grid_06pt"
+                            "style": "right_grid_06pt",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "right_grid_06pt"
+                            "style": "right_grid_06pt",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "right_grid_06pt"
+                            "style": "right_grid_06pt",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "right_grid_06pt"
+                            "style": "right_grid_06pt",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -537,24 +537,24 @@
                 {
                     "row": [
                         {
-                            "value": "center_grid_06pt",
-                            "style": "left"
+                            "style": "left",
+                            "value": "center_grid_06pt"
                         },
                         {
-                            "value": "some text",
-                            "style": "center_grid_06pt"
+                            "style": "center_grid_06pt",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "center_grid_06pt"
+                            "style": "center_grid_06pt",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "center_grid_06pt"
+                            "style": "center_grid_06pt",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "center_grid_06pt"
+                            "style": "center_grid_06pt",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -562,24 +562,24 @@
                 {
                     "row": [
                         {
-                            "value": "integer_grid_06pt",
-                            "style": "left"
+                            "style": "left",
+                            "value": "integer_grid_06pt"
                         },
                         {
-                            "value": "some text",
-                            "style": "integer_grid_06pt"
+                            "style": "integer_grid_06pt",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "integer_grid_06pt"
+                            "style": "integer_grid_06pt",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "integer_grid_06pt"
+                            "style": "integer_grid_06pt",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "integer_grid_06pt"
+                            "style": "integer_grid_06pt",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -587,24 +587,24 @@
                 {
                     "row": [
                         {
-                            "value": "integer_no_zero_grid_06pt",
-                            "style": "left"
+                            "style": "left",
+                            "value": "integer_no_zero_grid_06pt"
                         },
                         {
-                            "value": "some text",
-                            "style": "integer_no_zero_grid_06pt"
+                            "style": "integer_no_zero_grid_06pt",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "integer_no_zero_grid_06pt"
+                            "style": "integer_no_zero_grid_06pt",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "integer_no_zero_grid_06pt"
+                            "style": "integer_no_zero_grid_06pt",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "integer_no_zero_grid_06pt"
+                            "style": "integer_no_zero_grid_06pt",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -612,24 +612,24 @@
                 {
                     "row": [
                         {
-                            "value": "center_integer_no_zero_grid_06pt",
-                            "style": "left"
+                            "style": "left",
+                            "value": "center_integer_no_zero_grid_06pt"
                         },
                         {
-                            "value": "some text",
-                            "style": "center_integer_no_zero_grid_06pt"
+                            "style": "center_integer_no_zero_grid_06pt",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "center_integer_no_zero_grid_06pt"
+                            "style": "center_integer_no_zero_grid_06pt",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "center_integer_no_zero_grid_06pt"
+                            "style": "center_integer_no_zero_grid_06pt",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "center_integer_no_zero_grid_06pt"
+                            "style": "center_integer_no_zero_grid_06pt",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -637,24 +637,24 @@
                 {
                     "row": [
                         {
-                            "value": "decimal1_grid_06pt",
-                            "style": "left"
+                            "style": "left",
+                            "value": "decimal1_grid_06pt"
                         },
                         {
-                            "value": "some text",
-                            "style": "decimal1_grid_06pt"
+                            "style": "decimal1_grid_06pt",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "decimal1_grid_06pt"
+                            "style": "decimal1_grid_06pt",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "decimal1_grid_06pt"
+                            "style": "decimal1_grid_06pt",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "decimal1_grid_06pt"
+                            "style": "decimal1_grid_06pt",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -662,24 +662,24 @@
                 {
                     "row": [
                         {
-                            "value": "decimal2_grid_06pt",
-                            "style": "left"
+                            "style": "left",
+                            "value": "decimal2_grid_06pt"
                         },
                         {
-                            "value": "some text",
-                            "style": "decimal2_grid_06pt"
+                            "style": "decimal2_grid_06pt",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "decimal2_grid_06pt"
+                            "style": "decimal2_grid_06pt",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "decimal2_grid_06pt"
+                            "style": "decimal2_grid_06pt",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "decimal2_grid_06pt"
+                            "style": "decimal2_grid_06pt",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -687,24 +687,24 @@
                 {
                     "row": [
                         {
-                            "value": "decimal3_grid_06pt",
-                            "style": "left"
+                            "style": "left",
+                            "value": "decimal3_grid_06pt"
                         },
                         {
-                            "value": "some text",
-                            "style": "decimal3_grid_06pt"
+                            "style": "decimal3_grid_06pt",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "decimal3_grid_06pt"
+                            "style": "decimal3_grid_06pt",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "decimal3_grid_06pt"
+                            "style": "decimal3_grid_06pt",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "decimal3_grid_06pt"
+                            "style": "decimal3_grid_06pt",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -712,24 +712,24 @@
                 {
                     "row": [
                         {
-                            "value": "decimal4_grid_06pt",
-                            "style": "left"
+                            "style": "left",
+                            "value": "decimal4_grid_06pt"
                         },
                         {
-                            "value": "some text",
-                            "style": "decimal4_grid_06pt"
+                            "style": "decimal4_grid_06pt",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "decimal4_grid_06pt"
+                            "style": "decimal4_grid_06pt",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "decimal4_grid_06pt"
+                            "style": "decimal4_grid_06pt",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "decimal4_grid_06pt"
+                            "style": "decimal4_grid_06pt",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -737,24 +737,24 @@
                 {
                     "row": [
                         {
-                            "value": "decimal6_grid_06pt",
-                            "style": "left"
+                            "style": "left",
+                            "value": "decimal6_grid_06pt"
                         },
                         {
-                            "value": "some text",
-                            "style": "decimal6_grid_06pt"
+                            "style": "decimal6_grid_06pt",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "decimal6_grid_06pt"
+                            "style": "decimal6_grid_06pt",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "decimal6_grid_06pt"
+                            "style": "decimal6_grid_06pt",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "decimal6_grid_06pt"
+                            "style": "decimal6_grid_06pt",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -766,8 +766,8 @@
                 {
                     "row": [
                         {
-                            "value": "some custom styles defined at the top of this json file:",
-                            "style": "bold"
+                            "style": "bold",
+                            "value": "some custom styles defined at the top of this json file:"
                         }
                     ],
                     "style": "default_table_row"
@@ -775,24 +775,24 @@
                 {
                     "row": [
                         {
-                            "value": "bg_yellow",
-                            "style": "left"
+                            "style": "left",
+                            "value": "bg_yellow"
                         },
                         {
-                            "value": "some text",
-                            "style": "bg_yellow"
+                            "style": "bg_yellow",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "bg_yellow"
+                            "style": "bg_yellow",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "bg_yellow"
+                            "style": "bg_yellow",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "bg_yellow"
+                            "style": "bg_yellow",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
@@ -800,194 +800,227 @@
                 {
                     "row": [
                         {
-                            "value": "bg_yellow_grid06",
-                            "style": "left"
+                            "style": "left",
+                            "value": "bg_yellow_grid06"
                         },
                         {
-                            "value": "some text",
-                            "style": "bg_yellow_grid06"
+                            "style": "bg_yellow_grid06",
+                            "value": "some text"
                         },
                         {
-                            "value": 0,
-                            "style": "bg_yellow_grid06"
+                            "style": "bg_yellow_grid06",
+                            "value": 0
                         },
                         {
-                            "value": 123,
-                            "style": "bg_yellow_grid06"
+                            "style": "bg_yellow_grid06",
+                            "value": 123
                         },
                         {
-                            "value": 3.141592654,
-                            "style": "bg_yellow_grid06"
+                            "style": "bg_yellow_grid06",
+                            "value": 3.141592654
                         }
                     ],
                     "style": "default_table_row"
                 }
             ],
-            "width": [
-                "7cm",
-                "3cm",
-                "3cm",
-                "3cm",
-                "3cm"
-            ]
+            "width": ["7cm", "3cm", "3cm", "3cm", "3cm"]
+        }
+    ],
+    "common_styles": [
+        {
+            "definition": "<number:number-style>\n  <number:number number:min-integer-digits=\"1\"/>\n</number:number-style>\n",
+            "name": "N0"
+        },
+        {
+            "definition": "<number:currency-style style:volatile=\"true\">\n  <number:number number:decimal-places=\"2\" loext:min-decimal-places=\"2\" number:min-integer-digits=\"1\" number:grouping=\"true\"/>\n  <number:text> </number:text>\n  <number:currency-symbol number:language=\"fr\" number:country=\"FR\">€</number:currency-symbol>\n</number:currency-style>\n",
+            "name": "N108P0"
+        },
+        {
+            "definition": "<number:currency-style>\n  <style:text-properties fo:color=\"#ff0000\"/>\n  <number:text>-</number:text>\n  <number:number number:decimal-places=\"2\" loext:min-decimal-places=\"2\" number:min-integer-digits=\"1\" number:grouping=\"true\"/>\n  <number:text> </number:text>\n  <number:currency-symbol number:language=\"fr\" number:country=\"FR\">€</number:currency-symbol>\n  <style:map style:condition=\"value()&gt;=0\" style:apply-style-name=\"N108P0\"/>\n</number:currency-style>\n",
+            "name": "N108"
+        },
+        {
+            "definition": "<style:style style:family=\"table-cell\"/>\n",
+            "name": "Default"
+        },
+        {
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n  <style:text-properties fo:font-style=\"italic\" style:text-underline-style=\"solid\" style:text-underline-width=\"auto\" style:text-underline-color=\"font-color\" fo:font-weight=\"bold\"/>\n</style:style>\n",
+            "name": "Result"
+        },
+        {
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Result\" style:data-style-name=\"N108\"/>\n",
+            "name": "Result2"
+        },
+        {
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n  <style:table-cell-properties style:text-align-source=\"fix\" style:repeat-content=\"false\"/>\n  <style:paragraph-properties fo:text-align=\"center\"/>\n  <style:text-properties fo:font-size=\"16pt\" fo:font-style=\"italic\" fo:font-weight=\"bold\"/>\n</style:style>\n",
+            "name": "Heading"
+        },
+        {
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Heading\">\n  <style:table-cell-properties style:rotation-angle=\"90\"/>\n</style:style>\n",
+            "name": "Heading1"
+        }
+    ],
+    "default_styles": [
+        {
+            "definition": "<style:default-style style:family=\"table-cell\">\n  <style:table-cell-properties style:decimal-places=\"2\"/>\n  <style:paragraph-properties style:tab-stop-distance=\"12.5mm\"/>\n  <style:text-properties style:font-name=\"Arial\" fo:language=\"fr\" fo:country=\"FR\" style:font-name-asian=\"DejaVu Sans\" style:language-asian=\"zxx\" style:country-asian=\"none\" style:font-name-complex=\"DejaVu Sans\" style:language-complex=\"zxx\" style:country-complex=\"none\"/>\n</style:default-style>\n"
         }
     ],
     "styles": [
         {
-            "name": "decimal3_grid_06pt",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"decimal3\">\n             <style:table-cell-properties fo:border=\"0.06pt solid #000000\"/>\n             <style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n             </style:style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n             <style:table-cell-properties style:text-align-source=\"fix\" fo:border=\"0.06pt solid #000000\"/>\n             <style:paragraph-properties fo:margin-right=\"1.2mm\" fo:text-align=\"end\"/>\n             </style:style>\n",
+            "name": "right_grid_06pt"
         },
         {
-            "name": "cell_decimal2",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"decimal2\">\n             <style:paragraph-properties fo:margin-right=\"1.2mm\"/>\n             </style:style>\n"
+            "definition": "<number:number-style><number:number number:decimal-places=\"1\" loext:min-decimal-places=\"1\" number:min-integer-digits=\"1\" number:grouping=\"false\"/>\n            </number:number-style>\n",
+            "name": "decimal1"
         },
         {
-            "name": "bold_center_grid_06pt",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n             <style:table-cell-properties fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/>\n             <style:paragraph-properties fo:text-align=\"center\"/>\n             <style:text-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\"/>\n             </style:style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n              <style:table-cell-properties fo:background-color=\"#dddddd\" fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/>\n              <style:paragraph-properties fo:text-align=\"end\" fo:margin-right=\"1.2mm\"/>\n              <style:text-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\"/>\n              </style:style>\n",
+            "name": "bold_right_bg_gray_grid_06pt"
         },
         {
-            "name": "center_grid_06pt",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n             <style:table-cell-properties style:text-align-source=\"fix\" fo:border=\"0.06pt solid #000000\"/>\n             <style:paragraph-properties fo:text-align=\"center\"/>\n             </style:style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n            <style:table-cell-properties style:text-align-source=\"fix\" fo:border=\"0.06pt solid #000000\"/>\n            <style:paragraph-properties fo:margin-left=\"1.2mm\" fo:text-align=\"start\"/>\n            </style:style>\n",
+            "name": "left_grid_06pt"
         },
         {
-            "name": "center",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n            <style:table-cell-properties style:text-align-source=\"fix\"/>\n            <style:paragraph-properties fo:text-align=\"center\"/>\n            </style:style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"integer\">\n             <style:table-cell-properties fo:border=\"0.06pt solid #000000\"/>\n             <style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n             </style:style>\n",
+            "name": "integer_grid_06pt"
         },
         {
-            "name": "default_table_row",
-            "definition": "<style:style style:family=\"table-row\">\n            <style:table-row-properties style:row-height=\"4.52mm\" fo:break-before=\"auto\" style:use-optimal-row-height=\"true\"/>\n            </style:style>\n"
+            "definition": "<number:number-style><number:number number:decimal-places=\"6\" loext:min-decimal-places=\"6\" number:min-integer-digits=\"1\" number:grouping=\"false\"/>\n            </number:number-style>\n",
+            "name": "decimal6"
         },
         {
-            "name": "integer",
-            "definition": "<number:number-style><number:number number:decimal-places=\"0\" loext:min-decimal-places=\"0\" number:min-integer-digits=\"1\" number:grouping=\"false\"/>\n            </number:number-style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n            <style:text-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\"/>\n            <style:table-cell-properties style:text-align-source=\"value-type\"/>\n            <style:paragraph-properties fo:margin-right=\"1mm\"/>\n            </style:style>\n",
+            "name": "bold"
         },
         {
-            "name": "right",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n            <style:table-cell-properties style:text-align-source=\"fix\"/>\n            <style:paragraph-properties fo:text-align=\"end\" fo:margin-right=\"1mm\"/>\n            </style:style>\n"
+            "definition": "<number:number-style><number:number number:decimal-places=\"0\" loext:min-decimal-places=\"0\" number:min-integer-digits=\"0\" number:grouping=\"false\"/>\n            </number:number-style>\n",
+            "name": "integer_no_zero"
         },
         {
-            "name": "center_integer_no_zero_grid_06pt",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"integer_no_zero\">\n             <style:table-cell-properties fo:border=\"0.06pt solid #000000\"/>\n             <style:paragraph-properties fo:text-align=\"center\"/>\n             </style:style>\n"
+            "definition": "<number:number-style><number:number number:decimal-places=\"4\" loext:min-decimal-places=\"4\" number:min-integer-digits=\"1\" number:grouping=\"false\"/>\n            </number:number-style>\n",
+            "name": "decimal4"
         },
         {
-            "name": "decimal4_grid_06pt",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"decimal4\">\n             <style:table-cell-properties fo:border=\"0.06pt solid #000000\"/>\n             <style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n             </style:style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n            <style:text-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\"/>\n            <style:table-cell-properties style:text-align-source=\"fix\"/>\n            <style:paragraph-properties fo:text-align=\"center\"/>\n            </style:style>\n",
+            "name": "bold_center"
         },
         {
-            "name": "cell_decimal4",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"decimal4\">\n             <style:paragraph-properties fo:margin-right=\"1.2mm\"/>\n             </style:style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"decimal4\">\n             <style:paragraph-properties fo:margin-right=\"1.2mm\"/>\n             </style:style>\n",
+            "name": "cell_decimal4"
         },
         {
-            "name": "integer_no_zero",
-            "definition": "<number:number-style><number:number number:decimal-places=\"0\" loext:min-decimal-places=\"0\" number:min-integer-digits=\"0\" number:grouping=\"false\"/>\n            </number:number-style>\n"
+            "definition": "<style:style style:family=\"table-row\">\n            <style:table-row-properties style:row-height=\"1cm\" fo:break-before=\"auto\"/>\n            </style:style>\n",
+            "name": "table_row_1cm"
         },
         {
-            "name": "decimal2_grid_06pt",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"decimal2\">\n             <style:table-cell-properties fo:border=\"0.06pt solid #000000\"/>\n             <style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n             </style:style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n            <style:table-cell-properties style:text-align-source=\"fix\"/>\n            <style:paragraph-properties fo:text-align=\"end\" fo:margin-right=\"1mm\"/>\n            </style:style>\n",
+            "name": "right"
         },
         {
-            "name": "decimal2",
-            "definition": "<number:number-style><number:number number:decimal-places=\"2\" loext:min-decimal-places=\"2\" number:min-integer-digits=\"1\" number:grouping=\"false\"/>\n            </number:number-style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"decimal3\">\n             <style:paragraph-properties fo:margin-right=\"1.2mm\"/>\n             </style:style>\n",
+            "name": "cell_decimal3"
         },
         {
-            "name": "cell_decimal1",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"decimal1\">\n             <style:paragraph-properties fo:margin-right=\"1.2mm\"/>\n             </style:style>\n"
+            "definition": "<number:number-style><number:number number:decimal-places=\"3\" loext:min-decimal-places=\"3\" number:min-integer-digits=\"1\" number:grouping=\"false\"/>\n            </number:number-style>\n",
+            "name": "decimal3"
         },
         {
-            "name": "bold_right_grid_06pt",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n              <style:table-cell-properties fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/>\n              <style:paragraph-properties fo:text-align=\"end\" fo:margin-right=\"1.2mm\"/>\n              <style:text-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\"/>\n              </style:style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n             <style:table-cell-properties fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/>\n             <style:paragraph-properties fo:text-align=\"center\"/>\n             <style:text-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\"/>\n             </style:style>\n",
+            "name": "bold_center_grid_06pt"
         },
         {
-            "name": "decimal6_grid_06pt",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"decimal6\">\n             <style:table-cell-properties fo:border=\"0.06pt solid #000000\"/>\n             <style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n             </style:style>\n"
+            "definition": "<style:style style:family=\"table-row\">\n            <style:table-row-properties style:row-height=\"4.52mm\" fo:break-before=\"auto\" style:use-optimal-row-height=\"true\"/>\n            </style:style>\n",
+            "name": "default_table_row"
         },
         {
-            "name": "bold",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n            <style:text-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\"/>\n            <style:table-cell-properties style:text-align-source=\"value-type\"/>\n            <style:paragraph-properties fo:margin-right=\"1mm\"/>\n            </style:style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n             <style:table-cell-properties fo:background-color=\"#dddddd\" fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/>\n             <style:paragraph-properties fo:text-align=\"start\" fo:margin-left=\"1.2mm\"/>\n             <style:text-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\"/>\n             </style:style>\n",
+            "name": "bold_left_bg_gray_grid_06pt"
         },
         {
-            "name": "left_grid_06pt",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n            <style:table-cell-properties style:text-align-source=\"fix\" fo:border=\"0.06pt solid #000000\"/>\n            <style:paragraph-properties fo:margin-left=\"1.2mm\" fo:text-align=\"start\"/>\n            </style:style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n<style:table-cell-properties fo:background-color=\"#fff9ae\" fo:border=\"0.06pt solid #000000\"/>\n<style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n</style:style>\n",
+            "name": "bg_yellow_grid06"
         },
         {
-            "name": "decimal4",
-            "definition": "<number:number-style><number:number number:decimal-places=\"4\" loext:min-decimal-places=\"4\" number:min-integer-digits=\"1\" number:grouping=\"false\"/>\n            </number:number-style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n             <style:table-cell-properties style:text-align-source=\"fix\" fo:border=\"0.06pt solid #000000\"/>\n             <style:paragraph-properties fo:text-align=\"center\"/>\n             </style:style>\n",
+            "name": "center_grid_06pt"
         },
         {
-            "name": "decimal1",
-            "definition": "<number:number-style><number:number number:decimal-places=\"1\" loext:min-decimal-places=\"1\" number:min-integer-digits=\"1\" number:grouping=\"false\"/>\n            </number:number-style>\n"
+            "definition": "<number:number-style><number:number number:decimal-places=\"0\" loext:min-decimal-places=\"0\" number:min-integer-digits=\"1\" number:grouping=\"false\"/>\n            </number:number-style>\n",
+            "name": "integer"
         },
         {
-            "name": "bold_center",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n            <style:text-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\"/>\n            <style:table-cell-properties style:text-align-source=\"fix\"/>\n            <style:paragraph-properties fo:text-align=\"center\"/>\n            </style:style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"integer_no_zero\">\n             <style:table-cell-properties fo:border=\"0.06pt solid #000000\"/>\n             <style:paragraph-properties fo:text-align=\"center\"/>\n             </style:style>\n",
+            "name": "center_integer_no_zero_grid_06pt"
         },
         {
-            "name": "bg_yellow",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n<style:table-cell-properties fo:background-color=\"#fff9ae\"/>\n<style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n</style:style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"decimal1\">\n             <style:table-cell-properties fo:border=\"0.06pt solid #000000\"/>\n             <style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n             </style:style>\n",
+            "name": "decimal1_grid_06pt"
         },
         {
-            "name": "bg_yellow_grid06",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n<style:table-cell-properties fo:background-color=\"#fff9ae\" fo:border=\"0.06pt solid #000000\"/>\n<style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n</style:style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"decimal4\">\n             <style:table-cell-properties fo:border=\"0.06pt solid #000000\"/>\n             <style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n             </style:style>\n",
+            "name": "decimal4_grid_06pt"
         },
         {
-            "name": "right_grid_06pt",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n             <style:table-cell-properties style:text-align-source=\"fix\" fo:border=\"0.06pt solid #000000\"/>\n             <style:paragraph-properties fo:margin-right=\"1.2mm\" fo:text-align=\"end\"/>\n             </style:style>\n"
+            "definition": "<number:number-style><number:number number:decimal-places=\"2\" loext:min-decimal-places=\"2\" number:min-integer-digits=\"1\" number:grouping=\"false\"/>\n            </number:number-style>\n",
+            "name": "decimal2"
         },
         {
-            "name": "bold_right_bg_gray_grid_06pt",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n              <style:table-cell-properties fo:background-color=\"#dddddd\" fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/>\n              <style:paragraph-properties fo:text-align=\"end\" fo:margin-right=\"1.2mm\"/>\n              <style:text-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\"/>\n              </style:style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n            <style:table-cell-properties style:text-align-source=\"fix\"/>\n            <style:paragraph-properties fo:text-align=\"center\"/>\n            </style:style>\n",
+            "name": "center"
         },
         {
-            "name": "cell_decimal3",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"decimal3\">\n             <style:paragraph-properties fo:margin-right=\"1.2mm\"/>\n             </style:style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"decimal3\">\n             <style:table-cell-properties fo:border=\"0.06pt solid #000000\"/>\n             <style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n             </style:style>\n",
+            "name": "decimal3_grid_06pt"
         },
         {
-            "name": "bold_left_bg_gray_grid_06pt",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n             <style:table-cell-properties fo:background-color=\"#dddddd\" fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/>\n             <style:paragraph-properties fo:text-align=\"start\" fo:margin-left=\"1.2mm\"/>\n             <style:text-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\"/>\n             </style:style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n             <style:table-cell-properties fo:background-color=\"#dddddd\" fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/>\n             <style:paragraph-properties fo:text-align=\"center\"/>\n             <style:text-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\"/>\n             </style:style>\n",
+            "name": "bold_center_bg_gray_grid_06pt"
         },
         {
-            "name": "left",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n            <style:table-cell-properties style:text-align-source=\"fix\"/>\n            <style:paragraph-properties fo:text-align=\"start\" fo:margin-left=\"1mm\"/>\n            </style:style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"integer_no_zero\">\n             <style:table-cell-properties fo:border=\"0.06pt solid #000000\"/>\n             </style:style>\n",
+            "name": "integer_no_zero_grid_06pt"
         },
         {
-            "name": "grid_06pt",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n             <style:table-cell-properties fo:border=\"0.06pt solid #000000\"/>\n             <style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n             </style:style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"decimal1\">\n             <style:paragraph-properties fo:margin-right=\"1.2mm\"/>\n             </style:style>\n",
+            "name": "cell_decimal1"
         },
         {
-            "name": "bold_center_bg_gray_grid_06pt",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n             <style:table-cell-properties fo:background-color=\"#dddddd\" fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/>\n             <style:paragraph-properties fo:text-align=\"center\"/>\n             <style:text-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\"/>\n             </style:style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n              <style:table-cell-properties fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/>\n              <style:paragraph-properties fo:text-align=\"end\" fo:margin-right=\"1.2mm\"/>\n              <style:text-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\"/>\n              </style:style>\n",
+            "name": "bold_right_grid_06pt"
         },
         {
-            "name": "integer_no_zero_grid_06pt",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"integer_no_zero\">\n             <style:table-cell-properties fo:border=\"0.06pt solid #000000\"/>\n             </style:style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"decimal2\">\n             <style:paragraph-properties fo:margin-right=\"1.2mm\"/>\n             </style:style>\n",
+            "name": "cell_decimal2"
         },
         {
-            "name": "table_row_1cm",
-            "definition": "<style:style style:family=\"table-row\">\n            <style:table-row-properties style:row-height=\"1cm\" fo:break-before=\"auto\"/>\n            </style:style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"decimal6\">\n             <style:paragraph-properties fo:margin-right=\"1.2mm\"/>\n             </style:style>\n",
+            "name": "cell_decimal6"
         },
         {
-            "name": "cell_decimal6",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"decimal6\">\n             <style:paragraph-properties fo:margin-right=\"1.2mm\"/>\n             </style:style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"decimal6\">\n             <style:table-cell-properties fo:border=\"0.06pt solid #000000\"/>\n             <style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n             </style:style>\n",
+            "name": "decimal6_grid_06pt"
         },
         {
-            "name": "bold_left_grid_06pt",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n             <style:table-cell-properties fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/>\n             <style:paragraph-properties fo:text-align=\"start\" fo:margin-left=\"1.2mm\"/>\n             <style:text-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\"/>\n             </style:style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n             <style:table-cell-properties fo:border=\"0.06pt solid #000000\"/>\n             <style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n             </style:style>\n",
+            "name": "grid_06pt"
         },
         {
-            "name": "decimal6",
-            "definition": "<number:number-style><number:number number:decimal-places=\"6\" loext:min-decimal-places=\"6\" number:min-integer-digits=\"1\" number:grouping=\"false\"/>\n            </number:number-style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n             <style:table-cell-properties fo:border=\"0.06pt solid #000000\" style:text-align-source=\"fix\"/>\n             <style:paragraph-properties fo:text-align=\"start\" fo:margin-left=\"1.2mm\"/>\n             <style:text-properties fo:font-weight=\"bold\" style:font-weight-asian=\"bold\" style:font-weight-complex=\"bold\"/>\n             </style:style>\n",
+            "name": "bold_left_grid_06pt"
         },
         {
-            "name": "decimal1_grid_06pt",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"decimal1\">\n             <style:table-cell-properties fo:border=\"0.06pt solid #000000\"/>\n             <style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n             </style:style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n<style:table-cell-properties fo:background-color=\"#fff9ae\"/>\n<style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n</style:style>\n",
+            "name": "bg_yellow"
         },
         {
-            "name": "integer_grid_06pt",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"integer\">\n             <style:table-cell-properties fo:border=\"0.06pt solid #000000\"/>\n             <style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n             </style:style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\" style:data-style-name=\"decimal2\">\n             <style:table-cell-properties fo:border=\"0.06pt solid #000000\"/>\n             <style:paragraph-properties fo:margin-left=\"1.2mm\" fo:margin-right=\"1.2mm\"/>\n             </style:style>\n",
+            "name": "decimal2_grid_06pt"
         },
         {
-            "name": "decimal3",
-            "definition": "<number:number-style><number:number number:decimal-places=\"3\" loext:min-decimal-places=\"3\" number:min-integer-digits=\"1\" number:grouping=\"false\"/>\n            </number:number-style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n            <style:table-cell-properties style:text-align-source=\"fix\"/>\n            <style:paragraph-properties fo:text-align=\"start\" fo:margin-left=\"1mm\"/>\n            </style:style>\n",
+            "name": "left"
         }
     ]
 }

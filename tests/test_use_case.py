@@ -13,6 +13,14 @@ def canonical(dict_item):
     if "styles" in dict_item:
         tmp = sorted([(s["definition"], s.get("name")) for s in dict_item["styles"]])
         dict_item["styles"] = tmp
+    if "default_styles" in dict_item:
+        tmp = sorted([s["definition"] for s in dict_item["default_styles"]])
+        dict_item["default_styles"] = tmp
+    if "common_styles" in dict_item:
+        tmp = sorted(
+            [(s["definition"], s.get("name")) for s in dict_item["common_styles"]]
+        )
+        dict_item["common_styles"] = tmp
     return json.dumps(dict_item, sort_keys=True, indent=4, ensure_ascii=False)
 
 

@@ -2,23 +2,7 @@
     "body": [
         {
             "name": "test",
-            "table": [
-                [
-                    "formula test"
-                ],
-                [
-                    "a",
-                    10
-                ],
-                [
-                    "b",
-                    20
-                ],
-                [
-                    "a+b",
-                    30
-                ]
-            ]
+            "table": [["formula test"], ["a", 10], ["b", 20], ["a+b", 30]]
         }
     ]
 }

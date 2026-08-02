@@ -6,8 +6,8 @@
                 {
                     "row": [
                         {
-                            "value": "formula test",
-                            "style": "left"
+                            "style": "left",
+                            "value": "formula test"
                         }
                     ],
                     "style": "default_table_row"
@@ -15,62 +15,98 @@
                 {
                     "row": [
                         {
-                            "value": "a",
-                            "style": "left"
+                            "style": "left",
+                            "value": "a"
                         },
                         {
-                            "value": 10,
-                            "style": "right"
-                        }
-                    ],
-                    "style": "default_table_row"
-                },
-                {
-                    "row": [
-                        {
-                            "value": "b",
-                            "style": "left"
-                        },
-                        {
-                            "value": 20,
-                            "style": "right"
-                        }
-                    ],
-                    "style": "default_table_row"
-                },
-                {
-                    "row": [
-                        {
-                            "value": "a+b",
-                            "style": "left"
-                        },
-                        {
-                            "value": 30,
                             "style": "right",
-                            "formula": "of:=[.B3]+[.B2]"
+                            "value": 10
+                        }
+                    ],
+                    "style": "default_table_row"
+                },
+                {
+                    "row": [
+                        {
+                            "style": "left",
+                            "value": "b"
+                        },
+                        {
+                            "style": "right",
+                            "value": 20
+                        }
+                    ],
+                    "style": "default_table_row"
+                },
+                {
+                    "row": [
+                        {
+                            "style": "left",
+                            "value": "a+b"
+                        },
+                        {
+                            "formula": "of:=[.B3]+[.B2]",
+                            "style": "right",
+                            "value": 30
                         }
                     ],
                     "style": "default_table_row"
                 }
             ],
-            "width": [
-                "22.58mm",
-                "22.58mm"
-            ]
+            "width": ["22.58mm", "22.58mm"]
+        }
+    ],
+    "common_styles": [
+        {
+            "definition": "<number:number-style>\n  <number:number number:min-integer-digits=\"1\"/>\n</number:number-style>\n",
+            "name": "N0"
+        },
+        {
+            "definition": "<number:currency-style style:volatile=\"true\">\n  <number:number number:decimal-places=\"2\" loext:min-decimal-places=\"2\" number:min-integer-digits=\"1\" number:grouping=\"true\"/>\n  <number:text> </number:text>\n  <number:currency-symbol number:language=\"fr\" number:country=\"FR\">€</number:currency-symbol>\n</number:currency-style>\n",
+            "name": "N108P0"
+        },
+        {
+            "definition": "<number:currency-style>\n  <style:text-properties fo:color=\"#ff0000\"/>\n  <number:text>-</number:text>\n  <number:number number:decimal-places=\"2\" loext:min-decimal-places=\"2\" number:min-integer-digits=\"1\" number:grouping=\"true\"/>\n  <number:text> </number:text>\n  <number:currency-symbol number:language=\"fr\" number:country=\"FR\">€</number:currency-symbol>\n  <style:map style:condition=\"value()&gt;=0\" style:apply-style-name=\"N108P0\"/>\n</number:currency-style>\n",
+            "name": "N108"
+        },
+        {
+            "definition": "<style:style style:family=\"table-cell\"/>\n",
+            "name": "Default"
+        },
+        {
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n  <style:text-properties fo:font-style=\"italic\" style:text-underline-style=\"solid\" style:text-underline-width=\"auto\" style:text-underline-color=\"font-color\" fo:font-weight=\"bold\"/>\n</style:style>\n",
+            "name": "Result"
+        },
+        {
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Result\" style:data-style-name=\"N108\"/>\n",
+            "name": "Result2"
+        },
+        {
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n  <style:table-cell-properties style:text-align-source=\"fix\" style:repeat-content=\"false\"/>\n  <style:paragraph-properties fo:text-align=\"center\"/>\n  <style:text-properties fo:font-size=\"16pt\" fo:font-style=\"italic\" fo:font-weight=\"bold\"/>\n</style:style>\n",
+            "name": "Heading"
+        },
+        {
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Heading\">\n  <style:table-cell-properties style:rotation-angle=\"90\"/>\n</style:style>\n",
+            "name": "Heading1"
+        }
+    ],
+    "default_styles": [
+        {
+            "definition": "<style:default-style style:family=\"table-cell\">\n  <style:table-cell-properties style:decimal-places=\"2\"/>\n  <style:paragraph-properties style:tab-stop-distance=\"12.5mm\"/>\n  <style:text-properties style:font-name=\"Arial\" fo:language=\"fr\" fo:country=\"FR\" style:font-name-asian=\"DejaVu Sans\" style:language-asian=\"zxx\" style:country-asian=\"none\" style:font-name-complex=\"DejaVu Sans\" style:language-complex=\"zxx\" style:country-complex=\"none\"/>\n</style:default-style>\n"
         }
     ],
     "styles": [
         {
-            "name": "right",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n            <style:table-cell-properties style:text-align-source=\"fix\"/>\n            <style:paragraph-properties fo:text-align=\"end\" fo:margin-right=\"1mm\"/>\n            </style:style>\n"
+            "definition": "<style:style style:family=\"table-row\">\n            <style:table-row-properties style:row-height=\"4.52mm\" fo:break-before=\"auto\" style:use-optimal-row-height=\"true\"/>\n            </style:style>\n",
+            "name": "default_table_row"
         },
         {
-            "name": "default_table_row",
-            "definition": "<style:style style:family=\"table-row\">\n            <style:table-row-properties style:row-height=\"4.52mm\" fo:break-before=\"auto\" style:use-optimal-row-height=\"true\"/>\n            </style:style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n            <style:table-cell-properties style:text-align-source=\"fix\"/>\n            <style:paragraph-properties fo:text-align=\"end\" fo:margin-right=\"1mm\"/>\n            </style:style>\n",
+            "name": "right"
         },
         {
-            "name": "left",
-            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n            <style:table-cell-properties style:text-align-source=\"fix\"/>\n            <style:paragraph-properties fo:text-align=\"start\" fo:margin-left=\"1mm\"/>\n            </style:style>\n"
+            "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n            <style:table-cell-properties style:text-align-source=\"fix\"/>\n            <style:paragraph-properties fo:text-align=\"start\" fo:margin-left=\"1mm\"/>\n            </style:style>\n",
+            "name": "left"
         }
     ]
 }
