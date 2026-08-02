@@ -34,7 +34,12 @@ Repository = "https://github.com/jdum/odsparsator"
 odsparsator = "odsparsator.cli:main"
 
 [dependency-groups]
-doc = ["sphinx>=7.0", "myst-parser>=4.0.1"]
+doc = [
+    "sphinx>=7.0",
+    "myst-parser>=4.0.1",
+    "roman-numerals-py<4",
+]
+
 dev = [
     "pytest>=8.4.1",
     "pytest-cov>=6.2.1",
