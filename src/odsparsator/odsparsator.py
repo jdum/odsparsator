@@ -42,6 +42,8 @@ WIDTH = "width"
 SPAN = "span"
 STYLE = "style"
 STYLES = "styles"
+DEFAULT_STYLES = "default_styles"
+COMMON_STYLES = "common_styles"
 DEFAULT_BGCOLOR = "#ffffff"
 
 
@@ -66,6 +68,8 @@ class ODSParsator:
         self.doc: Document = Document("ods")
         self.body: Element = []
         self.styles: list = []
+        self.default_styles: list = []
+        self.common_styles: list = []
         self.col_widths: dict = {}
         self.export_full: bool = not export_minimal
         self.use_decimal: bool = use_decimal
@@ -105,6 +109,56 @@ class ODSParsator:
                         DEFINITION: style.serialize(pretty=True),
                     }
                 )
+
+    def collect_default_styles(self) -> None:
+        """Store default styles of styles.xml of type <office:styles>/<style:default-style>."""
+        self.default_styles = []
+        if not self.doc.styles:
+            return
+        office_styles = self.doc.styles.get_element("//office:styles")
+        if not office_styles:
+            return
+        for child in office_styles.children:
+            if child.tag == "style:default-style":
+                self.default_styles.append(
+                    {
+                        DEFINITION: child.serialize(pretty=True),
+                    }
+                )
+
+    def collect_common_styles(self) -> None:
+        """Store common styles of styles.xml."""
+        self.common_styles = []
+        if not self.doc.styles:
+            return
+
+        def _add_style(child: Element) -> None:
+            name = (
+                getattr(child, "name", None)
+                or child.get_attribute("style:name")
+                or child.get_attribute("draw:name")
+            )
+            if not name:
+                return
+            style_copy = Element.from_tag(child.serialize())
+            if style_copy.get_attribute("style:name") is not None:
+                style_copy.set_attribute("style:name", None)
+            elif style_copy.get_attribute("draw:name") is not None:
+                style_copy.set_attribute("draw:name", None)
+            self.common_styles.append(
+                {
+                    NAME: name,
+                    DEFINITION: style_copy.serialize(pretty=True),
+                }
+            )
+
+
+        office_styles = self.doc.styles.get_element("//office:styles")
+        if office_styles:
+            for child in office_styles.children:
+                if child.tag != "style:default-style":
+                    _add_style(child)
+
 
     def store_style_name(self, name: str | None) -> None:
         if not name:
@@ -184,6 +238,8 @@ class ODSParsator:
                 self.collect_all_styles()
             else:
                 self.collect_used_styles()
+            self.collect_default_styles()
+            self.collect_common_styles()
 
     def is_hidden_table(self, table: Table) -> bool:
         if self.see_hidden:
@@ -403,7 +459,12 @@ class ODSParsator:
     def content(self) -> dict[str, Any]:
         """Python dict of the content."""
         if self.export_full:
-            return {BODY: self.body, STYLES: self.styles}
+            return {
+                BODY: self.body,
+                STYLES: self.styles,
+                DEFAULT_STYLES: self.default_styles,
+                COMMON_STYLES: self.common_styles,
+            }
         return {BODY: self.body}
 
     @property
