@@ -20,13 +20,12 @@ from decimal import Decimal
 from pathlib import Path
 from typing import Any
 
-from odfdo import Document, Element
+from odfdo import Document, Element, Style
 from odfdo.cell import Cell
 from odfdo.document import Table
 from odfdo.row import Row
 
 __version__ = "1.15.0"
-
 
 
 BODY = "body"
@@ -67,11 +66,11 @@ class ODSParsator:
             Boolean options
         """
         self.doc: Document = Document("ods")
-        self.body: Element = []
-        self.styles: list = []
-        self.default_styles: list = []
-        self.common_styles: list = []
-        self.col_widths: dict = {}
+        self.body: list[dict[str, Any]] = []
+        self.styles: list[dict[str, Any]] = []
+        self.default_styles: list[dict[str, Any]] = []
+        self.common_styles: list[dict[str, Any]] = []
+        self.col_widths: dict[str, str] = {}
         self.export_full: bool = not export_minimal
         self.use_decimal: bool = use_decimal
         self.all_styles: bool = all_styles
@@ -90,9 +89,13 @@ class ODSParsator:
         if not self.export_full:
             return
         for style in self.doc.get_styles(family="table-column"):
+            if not isinstance(style, Style):
+                continue
             with contextlib.suppress(KeyError, TypeError):
-                width = style.get_properties("table-column")["style:column-width"]
-                self.col_widths[style.name] = width
+                properties = style.get_properties("table-column")
+                if properties and style.name:
+                    width = properties["style:column-width"]
+                    self.col_widths[style.name] = str(width)
 
     def collect_all_styles(self) -> None:
         """Store all automatic styles of the document.
@@ -101,7 +104,7 @@ class ODSParsator:
         """
         self.styles = []
         for style in self.doc.get_styles(automatic=True):
-            name = style.name
+            name = getattr(style, "name", None)
             if name:
                 style.set_attribute("style:name", None)
                 self.styles.append(
@@ -153,13 +156,11 @@ class ODSParsator:
                 }
             )
 
-
         office_styles = self.doc.styles.get_element("//office:styles")
         if office_styles:
             for child in office_styles.children:
                 if child.tag != "style:default-style":
                     _add_style(child)
-
 
     def store_style_name(self, name: str | None) -> None:
         if not name:
@@ -186,11 +187,13 @@ class ODSParsator:
         self._used_styles = set()
 
         self.collect_all_styles()
-        for style in self.styles:
-            name = style.get(NAME)
-            definition = style.get(DEFINITION)
-            style = Element.from_tag(definition)
-            self._styles_elements[name] = style
+        for style_dict in self.styles:
+            name = style_dict.get(NAME)
+            definition = style_dict.get(DEFINITION)
+            if not name or not definition:
+                continue
+            elem = Element.from_tag(definition)
+            self._styles_elements[name] = elem
         for table in self.body:
             self.keep_style(table)
             for row in table[TABLE]:
@@ -203,13 +206,13 @@ class ODSParsator:
                     self.keep_style(cell)
         self.styles = []
         for name in self._used_styles:
-            style = self._styles_elements[name]
-            if style.name:
-                style.set_attribute("style:name", None)
+            style_elem = self._styles_elements[name]
+            if style_elem.get_attribute("style:name"):
+                style_elem.set_attribute("style:name", None)
             self.styles.append(
                 {
                     NAME: name,
-                    DEFINITION: style.serialize(pretty=True),
+                    DEFINITION: style_elem.serialize(pretty=True),
                 }
             )
 
@@ -249,9 +252,12 @@ class ODSParsator:
         if not style_name:
             return False
         style = self.doc.get_style("table", style_name)
-        if not style:
+        if not isinstance(style, Style):
             return False
-        display = str(style.get_properties().get("table:display"))
+        properties = style.get_properties()
+        if not properties:
+            return False
+        display = str(properties.get("table:display"))
         if display:
             return display.lower().strip() == "false"
         return False
@@ -286,7 +292,7 @@ class ODSParsator:
         Args:
             table (odfdo.Table): Table object.
         """
-        record = {NAME: table.name}
+        record: dict[str, Any] = {NAME: table.name}
         record[TABLE] = [self.parse_row(row) for row in table.traverse()]
         if self.export_full:
             record[WIDTH] = self.columns_width(table)
@@ -305,6 +311,8 @@ class ODSParsator:
         widths: list[str] = []
         for col in table.get_columns():
             style_name = col.style
+            if not style_name:
+                break
             width = self.col_widths.get(style_name)
             if not width:
                 break
@@ -325,18 +333,21 @@ class ODSParsator:
         if value_type == "boolean":
             return cell.get_attribute("office:boolean-value")
         if value_type in {"float", "percentage", "currency"}:
-            value = Decimal(cell.get_attribute("office:value"))
-            if int(value) == value:
-                return int(value)
-            return float(value)
+            raw_value = cell.get_attribute("office:value")
+            if raw_value is None:
+                return None
+            num_value = Decimal(str(raw_value))
+            if int(num_value) == num_value:
+                return int(num_value)
+            return float(num_value)
         if value_type == "date":
             return cell.get_attribute("office:date-value")
         if value_type == "time":
             return cell.get_attribute("office:time-value")
         if value_type == "string":
-            value = cell.get_attribute("office:string-value")
-            if value is not None:
-                return value
+            str_value = cell.get_attribute("office:string-value")
+            if str_value is not None:
+                return str(str_value)
             value_list = [para.text_recursive for para in cell.get_elements("text:p")]
             return "\n".join(value_list)
         return None
@@ -436,7 +447,9 @@ class ODSParsator:
             props = self._style_cell_properties(("table-row", row.style))
             if props:
                 return str(props.get("fo:background-color", DEFAULT_BGCOLOR))
-        return self._column_bgcolor(cell.x)
+        if cell.x is not None:
+            return self._column_bgcolor(cell.x)
+        return DEFAULT_BGCOLOR
 
     @staticmethod
     def spanned(cell: Cell) -> dict | None:
