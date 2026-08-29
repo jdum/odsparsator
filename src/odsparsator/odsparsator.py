@@ -25,7 +25,7 @@ from odfdo.cell import Cell
 from odfdo.document import Table
 from odfdo.row import Row
 
-__version__ = "1.15.0"
+__version__ = "1.16.0"
 
 
 BODY = "body"
@@ -281,7 +281,8 @@ class ODSParsator:
         self._current_table_column_cache = {}
         self._current_table = table  # for default bgcolor
         if self.keep_styled:
-            table.optimize_height()
+            if hasattr(table, "optimize_height"):
+                table.optimize_height()
             table.optimize_width()
         else:
             table.rstrip(aggressive=True)
