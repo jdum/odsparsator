@@ -275,6 +275,7 @@ class ODSParsator:
         self._current_table_column_cache = {}
         self._current_table = table  # for default bgcolor
         if self.keep_styled:
+            table.optimize_height()
             table.optimize_width()
         else:
             table.rstrip(aggressive=True)
