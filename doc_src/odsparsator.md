@@ -174,7 +174,8 @@ A **document** can be:
     - body: a list of tabs,
     - styles: a list of dicts of automatic styles definitions,
     - default_styles: a list of dicts of default styles definitions,
-    - common_styles: a list of dicts of common styles definitions.
+    - common_styles: a list of dicts of common styles definitions,
+    - language: str, document language code (e.g. "en-US", "fr-FR").
 
 A **style** definition in `styles` and `common_styles` is a dict with 2 items:
 
