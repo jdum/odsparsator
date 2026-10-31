@@ -13,7 +13,7 @@ import odfdo
 from odsparsator.odsparsator import __doc__ as op_doc
 from odsparsator.odsparsator import __version__, ods_to_json
 
-ODFDO_REQUIREMENT = (3, 19, 0)
+ODFDO_REQUIREMENT = (3, 27, 3)
 
 
 def check_odfdo_version() -> bool:
