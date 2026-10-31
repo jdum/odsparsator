@@ -95,6 +95,7 @@
             "definition": "<style:default-style style:family=\"table-cell\">\n  <style:table-cell-properties style:decimal-places=\"2\"/>\n  <style:paragraph-properties style:tab-stop-distance=\"12.5mm\"/>\n  <style:text-properties style:font-name=\"Arial\" fo:language=\"fr\" fo:country=\"FR\" style:font-name-asian=\"DejaVu Sans\" style:language-asian=\"zxx\" style:country-asian=\"none\" style:font-name-complex=\"DejaVu Sans\" style:language-complex=\"zxx\" style:country-complex=\"none\"/>\n</style:default-style>\n"
         }
     ],
+    "language": "fr-FR",
     "styles": [
         {
             "definition": "<style:style style:family=\"table-row\">\n            <style:table-row-properties style:row-height=\"4.52mm\" fo:break-before=\"auto\" style:use-optimal-row-height=\"true\"/>\n            </style:style>\n",

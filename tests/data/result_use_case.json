@@ -1441,11 +1441,7 @@
                     "style": "default_table_row"
                 }
             ],
-            "width": [
-                "1.5752in",
-                "1.5752in",
-                "1.5752in"
-            ]
+            "width": ["1.5752in", "1.5752in", "1.5752in"]
         }
     ],
     "common_styles": [
@@ -1566,6 +1562,7 @@
             "definition": "<style:default-style style:family=\"graphic\">\n  <style:graphic-properties svg:stroke-color=\"#3465a4\" draw:fill-color=\"#729fcf\" fo:wrap-option=\"no-wrap\" draw:shadow-offset-x=\"0.1181in\" draw:shadow-offset-y=\"0.1181in\" style:writing-mode=\"page\"/>\n  <style:paragraph-properties style:text-autospace=\"ideograph-alpha\" style:punctuation-wrap=\"simple\" style:line-break=\"strict\" style:font-independent-line-spacing=\"false\">\n    <style:tab-stops/>\n  </style:paragraph-properties>\n  <style:text-properties style:use-window-font-color=\"true\" loext:opacity=\"0%\" fo:font-family=\"'Liberation Serif'\" style:font-family-generic=\"roman\" style:font-pitch=\"variable\" fo:font-size=\"12pt\" fo:language=\"fr\" fo:country=\"FR\" style:letter-kerning=\"true\" style:font-family-asian=\"Tahoma\" style:font-family-generic-asian=\"system\" style:font-pitch-asian=\"variable\" style:font-size-asian=\"12pt\" style:language-asian=\"zxx\" style:country-asian=\"none\" style:font-family-complex=\"Tahoma\" style:font-family-generic-complex=\"system\" style:font-pitch-complex=\"variable\" style:font-size-complex=\"12pt\" style:language-complex=\"zxx\" style:country-complex=\"none\"/>\n</style:default-style>\n"
         }
     ],
+    "language": "fr-FR",
     "styles": [
         {
             "definition": "<style:style style:family=\"table-cell\" style:parent-style-name=\"Default\">\n  <style:table-cell-properties fo:background-color=\"#14fe5c\" style:text-align-source=\"fix\" style:repeat-content=\"false\" fo:border=\"0.06pt solid #000000\"/>\n  <style:paragraph-properties fo:text-align=\"center\"/>\n  <style:text-properties fo:color=\"#ffffff\"/>\n</style:style>\n",
