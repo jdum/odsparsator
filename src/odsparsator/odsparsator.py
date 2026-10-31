@@ -45,6 +45,7 @@ STYLES = "styles"
 DEFAULT_STYLES = "default_styles"
 COMMON_STYLES = "common_styles"
 DEFAULT_BGCOLOR = "#ffffff"
+LANGUAGE = "language"
 
 
 class ODSParsator:
@@ -82,6 +83,7 @@ class ODSParsator:
         self._current_table_column_cache: dict[int, str] = {}
         self._styles_elements: dict[str, Element] = {}
         self._used_styles: set[str] = set()
+        self.language: str | None = None
 
     def collect_col_widths(self) -> None:
         """Collect all columns widths from styles."""
@@ -235,6 +237,7 @@ class ODSParsator:
 
     def parse(self) -> None:
         """Parse the .ods content."""
+        self.language = self.doc.language
         self.collect_col_widths()
         self.collect_tables()
         if self.export_full:
@@ -475,12 +478,15 @@ class ODSParsator:
     def content(self) -> dict[str, Any]:
         """Python dict of the content."""
         if self.export_full:
-            return {
+            result = {
                 BODY: self.body,
                 STYLES: self.styles,
                 DEFAULT_STYLES: self.default_styles,
                 COMMON_STYLES: self.common_styles,
             }
+            if self.language:
+                result[LANGUAGE] = self.language
+            return result
         return {BODY: self.body}
 
     @property
