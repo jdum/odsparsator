@@ -1,6 +1,6 @@
 [project]
 name = "odsparsator"
-version = "1.17.0"
+version = "1.18.0"
 description = "Generate a json file from an OpenDocument Format .ods file"
 license = "MIT"
 license-files = ["LICENSE.txt"]
@@ -45,8 +45,8 @@ dev = [
     "coverage>=7.16.1",
     "typing-extensions>=4.15.0",
     "tox>=4.63.0",
-    "ruff>=0.17.0",
-    "ty>=0.0.86",
+    "ruff>=0.17.3",
+    "ty>=0.0.95",
 ]
 
 [tool.uv]
